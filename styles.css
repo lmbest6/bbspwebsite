@@ -19,7 +19,7 @@
   /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 52px; height: 72px; background: rgba(16,16,16,0.96); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(13,107,98,0.35); transition: background 0.3s; }
   .nav-logo { text-decoration: none; display: flex; align-items: center; gap: 12px; }
-  .nav-logo img { height: 50px; width: 50px; object-fit: contain; mix-blend-mode: multiply; filter: brightness(1.1); }
+  .nav-logo img { height: 50px; width: 50px; object-fit: contain; mix-blend-mode: screen; }
   .nav-logo-text { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 1.1rem; letter-spacing: 0.07em; text-transform: uppercase; color: white; line-height: 1.15; }
   .nav-logo-text span { color: var(--teal-bright); display: block; font-size: 0.7rem; letter-spacing: 0.22em; font-weight: 600; }
   .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
