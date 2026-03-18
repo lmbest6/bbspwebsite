@@ -211,8 +211,7 @@
   .prog-link { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.88rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal-bright); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: gap 0.2s; }
   .prog-link:hover { gap: 16px; }
   .community-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-  .schedule-embed { border-radius: 4px; overflow: hidden; border: 1px solid rgba(13,107,98,0.35); background: rgba(255,255,255,0.03); }
-  .schedule-embed iframe { display: block; }
+  .schedule-cta-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--teal); color: white; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 32px; border-radius: 3px; text-decoration: none; transition: background 0.2s; margin-top: 8px; }
   .schedule-list { display: flex; flex-direction: column; gap: 10px; }
   .sched-item { background: rgba(255,255,255,0.04); border-left: 3px solid var(--teal-bright); padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
   .sched-name { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: white; }

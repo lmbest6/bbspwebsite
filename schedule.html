@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Schedule — Barbell Saves Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: var(--iron); }
+  .schedule-page { padding: 120px 52px 80px; max-width: 1200px; margin: 0 auto; }
+  .schedule-page-header { margin-bottom: 48px; }
+  .schedule-page-header .section-tag { margin-bottom: 12px; }
+  .schedule-page-header h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 3.2rem; letter-spacing: 0.04em; text-transform: uppercase; color: white; line-height: 1; margin-bottom: 16px; }
+  .schedule-page-header p { font-size: 1.05rem; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 560px; line-height: 1.7; }
+  .schedule-meta { display: flex; gap: 32px; margin-top: 24px; flex-wrap: wrap; }
+  .schedule-meta-item { display: flex; align-items: center; gap: 10px; font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+  .schedule-meta-item span { color: var(--teal-bright); }
+  .schedule-frame-wrap { border: 1px solid rgba(13,107,98,0.35); border-radius: 4px; overflow: hidden; background: #fff; }
+  .schedule-frame-wrap iframe { display: block; }
+  @media (max-width: 768px) {
+    .schedule-page { padding: 100px 20px 60px; }
+    .schedule-page-header h1 { font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/image1.png" alt="The Barbell Saves Project">
+    <div class="nav-logo-text">Barbell Saves<span>Project</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#mission">Mission</a></li>
+    <li><a href="index.html#programs">Programs</a></li>
+    <li><a href="index.html#houses">Houses</a></li>
+    <li><a href="index.html#partners">Partner With Us</a></li>
+    <li><a href="index.html#donate" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+<div class="schedule-page">
+  <div class="schedule-page-header">
+    <div class="section-tag">Class Schedule</div>
+    <h1>Join a Free Class</h1>
+    <p>All classes are free and open to the community — no recovery requirement, no insurance, no cost. Just show up.</p>
+    <div class="schedule-meta">
+      <div class="schedule-meta-item"><span>&#128205;</span> Phoenix, AZ &mdash; The Barbell Saves Project</div>
+      <div class="schedule-meta-item"><span>&#10084;</span> Always Free &middot; Open to All</div>
+    </div>
+  </div>
+  <div class="schedule-frame-wrap">
+    <iframe width="100%" height="800px" src="https://go.streamfit.com/embed/schedule/706-the-barbell-saves-project" frameBorder="0" noresize="noresize"></iframe>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
