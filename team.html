@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team — Barbell Saves Project</title>
+<meta name="description" content="Meet the founder, CEO, and board of directors behind the Barbell Saves Project — a 501(c)(3) nonprofit serving recovery communities in Phoenix, AZ.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* PAGE HEADER */
+  .team-header { background: var(--iron); padding: 120px 52px 64px; border-bottom: 1px solid rgba(13,107,98,0.3); }
+  .team-header-inner { max-width: 1200px; margin: 0 auto; }
+  .team-header .section-tag { margin-bottom: 12px; }
+  .team-header h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 3.2rem; letter-spacing: 0.04em; text-transform: uppercase; color: white; line-height: 1; margin-bottom: 16px; }
+  .team-header p { font-size: 1.05rem; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 620px; line-height: 1.7; }
+
+  /* FOUNDER SPOTLIGHT */
+  .founder-section { background: var(--iron); padding: 80px 52px; }
+  .founder-inner { max-width: 1200px; margin: 0 auto; }
+  .founder-layout { display: grid; grid-template-columns: 340px 1fr; gap: 72px; align-items: start; }
+  .founder-photo-wrap { position: relative; }
+  .founder-photo { width: 100%; aspect-ratio: 3/4; background: linear-gradient(160deg, #0D6B62 0%, #084f49 60%, #042e2b 100%); border-radius: 6px; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+  .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 6px; }
+  .founder-photo-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+  .founder-photo-placeholder span { font-family: "Barlow Condensed", sans-serif; font-size: 6rem; font-weight: 900; color: rgba(255,255,255,0.08); letter-spacing: 0.04em; text-transform: uppercase; }
+  .founder-tag { display: inline-block; background: var(--teal); color: white; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 6px 14px; border-radius: 2px; margin-bottom: 20px; }
+  .founder-name { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 3rem; letter-spacing: 0.04em; text-transform: uppercase; color: white; line-height: 1; margin-bottom: 6px; }
+  .founder-title { font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 1.15rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 32px; }
+  .founder-divider { width: 48px; height: 3px; background: var(--teal); margin-bottom: 28px; }
+  .founder-body p { font-size: 1rem; color: rgba(255,255,255,0.65); font-weight: 300; line-height: 1.85; margin-bottom: 20px; }
+  .founder-body p strong { color: white; font-weight: 600; }
+  .founder-quote { border-left: 3px solid var(--teal); padding: 20px 28px; margin: 36px 0; background: rgba(13,107,98,0.1); border-radius: 0 4px 4px 0; }
+  .founder-quote p { font-size: 1.1rem; color: rgba(255,255,255,0.85); font-style: italic; font-weight: 300; line-height: 1.75; margin: 0; }
+
+  /* BOARD SECTION */
+  .board-section { background: var(--off-white); padding: 80px 52px; }
+  .board-inner { max-width: 1200px; margin: 0 auto; }
+  .board-section .section-tag { margin-bottom: 12px; }
+  .board-section h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 2.4rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--iron); margin-bottom: 12px; line-height: 1; }
+  .board-intro { font-size: 1rem; color: #666; font-weight: 300; max-width: 580px; line-height: 1.7; margin-bottom: 56px; }
+  .board-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .board-card { background: white; border: 1px solid rgba(0,0,0,0.08); border-top: 4px solid var(--teal); border-radius: 0 0 6px 6px; padding: 32px 28px; transition: box-shadow 0.2s, transform 0.2s; }
+  .board-card:hover { box-shadow: 0 12px 36px rgba(13,107,98,0.1); transform: translateY(-3px); }
+  .board-card-photo { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0D6B62, #084f49); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .board-card-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .board-card-photo span { font-family: "Barlow Condensed", sans-serif; font-size: 1.6rem; font-weight: 900; color: rgba(255,255,255,0.5); text-transform: uppercase; }
+  .board-card-role { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+  .board-card-name { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 1.35rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--iron); line-height: 1.1; margin-bottom: 4px; }
+  .board-card-creds { font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.06em; color: #888; margin-bottom: 16px; }
+  .board-card-bio { font-size: 0.88rem; color: #666; font-weight: 300; line-height: 1.75; }
+  .peer-badge { display: inline-block; background: rgba(13,107,98,0.1); color: var(--teal); font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; margin-bottom: 14px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .founder-layout { grid-template-columns: 260px 1fr; gap: 48px; }
+  }
+  @media (max-width: 860px) {
+    .team-header, .founder-section, .board-section { padding-left: 20px; padding-right: 20px; }
+    .team-header { padding-top: 100px; padding-bottom: 48px; }
+    .team-header h1 { font-size: 2.2rem; }
+    .founder-layout { grid-template-columns: 1fr; gap: 40px; }
+    .founder-photo { aspect-ratio: 4/3; }
+    .board-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/image1.png" alt="The Barbell Saves Project">
+    <div class="nav-logo-text">Barbell Saves<span>Project</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#mission">Mission</a></li>
+    <li><a href="houses.html">Houses</a></li>
+    <li><a href="partners.html">Partners</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="get-involved.html">Get Involved</a></li>
+    <li><a href="get-involved.html#donate" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="team-header">
+  <div class="team-header-inner">
+    <div class="section-tag">Who We Are</div>
+    <h1>The People Behind<br>the Movement</h1>
+    <p>Barbell Saves Project is led by people with a personal stake in recovery — founders, clinicians, peers, and community leaders united around a single belief: that movement, community, and purpose save lives.</p>
+  </div>
+</div>
+
+<!-- FOUNDER SPOTLIGHT -->
+<section class="founder-section">
+  <div class="founder-inner">
+    <div class="founder-layout">
+      <div class="founder-photo-wrap">
+        <div class="founder-photo">
+          <div class="founder-photo-placeholder">
+            <span>RB</span>
+          </div>
+        </div>
+      </div>
+      <div class="founder-body">
+        <div class="founder-tag">Founder &amp; CEO</div>
+        <div class="founder-name">Rob Best</div>
+        <div class="founder-title">Founder &amp; Chief Executive Officer</div>
+        <div class="founder-divider"></div>
+        <p>The Barbell Saves Project exists because of Rob Best. A person in long-term recovery himself, Rob understood firsthand what was missing from the recovery landscape — not more clinical programs behind closed doors, but a <strong>community-rooted movement</strong> built on fitness, accountability, and belonging.</p>
+        <p>Where others saw a gap, Rob saw a gym floor. He built Barbell Saves Project from the ground up — developing the programming model, forging the partnerships, opening the recovery houses, and recruiting the people who share his conviction that <strong>the barbell saves</strong>.</p>
+        <p>Under Rob's leadership, the organization has grown from a single community class to a full ecosystem of care: four recovery houses, free daily programming, twenty-plus partner organizations, and thousands of lives touched across the Phoenix metro area.</p>
+        <div class="founder-quote">
+          <p>"This wasn't built around a business plan. It was built around people who needed something that didn't exist yet. We just decided to build it."</p>
+        </div>
+        <p>Rob leads every aspect of the organization — from day-to-day operations and community outreach to fundraising and strategic growth — with the same intensity he brings to the gym floor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOARD OF DIRECTORS -->
+<section class="board-section">
+  <div class="board-inner">
+    <div class="section-tag">Leadership</div>
+    <h2>Board of Directors</h2>
+    <p class="board-intro">Our board brings together clinical expertise, financial leadership, peer-lived experience, and community influence — all in service of the mission.</p>
+
+    <div class="board-grid">
+
+      <!-- Hayley Avino -->
+      <div class="board-card">
+        <div class="board-card-photo"><span>HA</span></div>
+        <div class="board-card-role">President</div>
+        <div class="board-card-name">Hayley Avino</div>
+        <div class="board-card-creds">DNP, FNP-C, ENP-C</div>
+        <p class="board-card-bio">A doctoral-prepared nurse practitioner with dual certification in family and emergency medicine. Hayley brings deep clinical expertise to the board, helping ensure that the organization's programming reflects current evidence-based practice in behavioral health and recovery medicine.</p>
+      </div>
+
+      <!-- Bob Grant -->
+      <div class="board-card">
+        <div class="board-card-photo"><span>BG</span></div>
+        <div class="board-card-role">Treasurer</div>
+        <div class="board-card-name">Bob Grant</div>
+        <div class="board-card-creds">Former CFO, Boeing</div>
+        <p class="board-card-bio">A seasoned financial executive with a career in corporate leadership at Boeing, Bob brings the financial discipline and strategic rigor of a Fortune 500 CFO to the Barbell Saves Project. His oversight ensures the organization operates with the transparency and fiscal responsibility our donors and community deserve.</p>
+      </div>
+
+      <!-- Nate Thorne -->
+      <div class="board-card">
+        <div class="board-card-photo"><span>NT</span></div>
+        <div class="board-card-role">Board Member</div>
+        <div class="board-card-name">Nate Thorne</div>
+        <div class="board-card-creds">CPA</div>
+        <div class="peer-badge">Person in Recovery</div>
+        <p class="board-card-bio">A certified public accountant who brings both professional financial expertise and the perspective of lived recovery experience. Nate's dual role as a peer and CPA gives him a uniquely grounded understanding of what the mission requires — and what it actually costs.</p>
+      </div>
+
+      <!-- David Perez -->
+      <div class="board-card">
+        <div class="board-card-photo"><span>DP</span></div>
+        <div class="board-card-role">Board Member</div>
+        <div class="board-card-name">David Perez</div>
+        <div class="board-card-creds">Realtor</div>
+        <div class="peer-badge">Person in Recovery</div>
+        <p class="board-card-bio">A real estate professional and person in recovery, David contributes both his industry expertise and his personal connection to the work. His knowledge of the Phoenix housing market is a direct asset in sustaining and expanding the organization's recovery house portfolio.</p>
+      </div>
+
+      <!-- Jordan Whall -->
+      <div class="board-card">
+        <div class="board-card-photo"><span>JW</span></div>
+        <div class="board-card-role">Board Member</div>
+        <div class="board-card-name">Jordan Whall</div>
+        <div class="board-card-creds">Director, DraftKings</div>
+        <div class="peer-badge">Person in Recovery</div>
+        <p class="board-card-bio">A director at DraftKings and person in recovery, Jordan brings corporate operations experience and a passion for community to the board. His background in scaling programs and building teams within a major sports entertainment company informs how Barbell Saves approaches growth and organizational development.</p>
+      </div>
+
+      <!-- Brandi Hernandez -->
+      <div class="board-card">
+        <div class="board-card-photo"><span>BH</span></div>
+        <div class="board-card-role">Board Member</div>
+        <div class="board-card-name">Brandi Hernandez</div>
+        <div class="board-card-creds">&nbsp;</div>
+        <div class="peer-badge">Person in Recovery</div>
+        <p class="board-card-bio">A person in recovery who brings the most essential perspective to the board — that of someone who has lived the journey this organization exists to support. Brandi's voice ensures the community we serve remains at the center of every decision we make.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band" style="position:relative;">
+  <div style="position:absolute;inset:0;background-image:url('images/image14.jpg');background-size:cover;background-position:center 40%;filter:brightness(0.15) saturate(0.6);"></div>
+  <div class="cta-band-inner">
+    <h2>Ready to Make a Move?</h2>
+    <p>Whether you want to donate, partner, volunteer, or just show up &#8212; there's a place for you in this movement.</p>
+    <div class="cta-btns">
+      <a href="https://igfn.us/form/uz2sVw" target="_blank" rel="noopener" class="btn-primary">Donate Now</a>
+      <a href="get-involved.html" class="btn-secondary" style="border-color:rgba(255,255,255,0.4);">Partner With Us</a>
+      <a href="index.html#programs" class="btn-secondary" style="border-color:rgba(255,255,255,0.4);">Join a Class</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="images/image8.png" alt="The Barbell Saves Project">
+      <div class="footer-501c3">501(c)(3) Nonprofit Organization &middot; EIN: 84-3982601</div>
+      <p>Using the power of movement, peer support, and community to help people in recovery build lives worth staying sober for &#8212; at zero cost to participants.</p>
+      <div class="social-row">
+        <a href="#" class="social-icon">f</a>
+        <a href="#" class="social-icon">in</a>
+        <a href="#" class="social-icon">ig</a>
+        <a href="#" class="social-icon">tw</a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Programs</h5><ul><li><a href="schedule.html">Community Classes</a></li><li><a href="houses.html">Recovery Houses</a></li><li><a href="#">Private &amp; Partner Classes</a></li><li><a href="#">Peer Support</a></li><li><a href="schedule.html">Class Schedule</a></li></ul></div>
+    <div class="footer-col"><h5>Get Involved</h5><ul><li><a href="get-involved.html#donate">Donate</a></li><li><a href="get-involved.html#sponsors">Become a Sponsor</a></li><li><a href="get-involved.html">Partner With Us</a></li><li><a href="#">Volunteer</a></li><li><a href="#">Refer a Client</a></li></ul></div>
+    <div class="footer-col"><h5>Organization</h5><ul><li><a href="#">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="#">Contact</a></li><li><a href="#">Clinical Center (TBSOP)</a></li><li><a href="https://issuu.com/barbellsaves/docs/2025_impact_report_final" target="_blank" rel="noopener">2026 Impact Report</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>&#169; 2025 Barbell Saves Project &middot; All rights reserved &middot; <a href="#">Privacy Policy</a></p>
+    <p>Barbell Saves Project is a registered 501(c)(3) nonprofit. Donations are tax-deductible to the full extent of the law.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
