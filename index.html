@@ -208,10 +208,125 @@
       <p style="font-size:1rem;color:rgba(255,255,255,0.55);font-weight:300;line-height:1.75;max-width:520px;margin-bottom:32px;">Our gear isn't just apparel &mdash; it's a statement. Every purchase funds free classes, peer support, and housing for people rebuilding their lives.</p>
       <a href="https://thebbsp.myshopify.com" target="_blank" rel="noopener" class="btn-primary">Shop Now &nbsp;&#8594;</a>
     </div>
-    <div style="flex:0 0 auto;background:rgba(13,107,98,0.12);border:1px solid rgba(13,107,98,0.3);border-radius:6px;padding:40px 52px;text-align:center;">
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.9rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:10px;">BBSP Shop</div>
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:3.5rem;letter-spacing:0.04em;text-transform:uppercase;color:white;line-height:1;margin-bottom:16px;">Gear<br>&amp;<br>Merch</div>
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);">thebbsp.myshopify.com</div>
+    <div style="flex:0 0 auto;min-width:280px;">
+      <div id='product-component-1774379873838'></div>
+      <script type="text/javascript">
+      /*<![CDATA[*/
+      (function () {
+        var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+        if (window.ShopifyBuy) {
+          if (window.ShopifyBuy.UI) {
+            ShopifyBuyInit();
+          } else {
+            loadScript();
+          }
+        } else {
+          loadScript();
+        }
+        function loadScript() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = scriptURL;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+          script.onload = ShopifyBuyInit;
+        }
+        function ShopifyBuyInit() {
+          var client = ShopifyBuy.buildClient({
+            domain: '133668.myshopify.com',
+            storefrontAccessToken: 'b79e62a882fbdc2cb584bd9b56240469',
+          });
+          ShopifyBuy.UI.onReady(client).then(function (ui) {
+            ui.createComponent('product', {
+              id: '10109571465492',
+              node: document.getElementById('product-component-1774379873838'),
+              moneyFormat: '%24%7B%7Bamount%7D%7D',
+              options: {
+        "product": {
+          "styles": {
+            "product": {
+              "@media (min-width: 601px)": {
+                "max-width": "calc(25% - 20px)",
+                "margin-left": "20px",
+                "margin-bottom": "50px"
+              }
+            },
+            "button": {
+              "background-color": "#0d6b62",
+              ":hover": {
+                "background-color": "#0c6058"
+              },
+              ":focus": {
+                "background-color": "#0c6058"
+              }
+            }
+          }
+        },
+        "productSet": {
+          "styles": {
+            "products": {
+              "@media (min-width: 601px)": {
+                "margin-left": "-20px"
+              }
+            }
+          }
+        },
+        "modalProduct": {
+          "contents": {
+            "img": false,
+            "imgWithCarousel": true
+          },
+          "styles": {
+            "product": {
+              "@media (min-width: 601px)": {
+                "max-width": "100%",
+                "margin-left": "0px",
+                "margin-bottom": "0px"
+              }
+            },
+            "button": {
+              "background-color": "#0d6b62",
+              ":hover": {
+                "background-color": "#0c6058"
+              },
+              ":focus": {
+                "background-color": "#0c6058"
+              }
+            }
+          }
+        },
+        "cart": {
+          "styles": {
+            "button": {
+              "background-color": "#0d6b62",
+              ":hover": {
+                "background-color": "#0c6058"
+              },
+              ":focus": {
+                "background-color": "#0c6058"
+              }
+            }
+          }
+        },
+        "toggle": {
+          "styles": {
+            "toggle": {
+              "background-color": "#0d6b62",
+              ":hover": {
+                "background-color": "#0c6058"
+              },
+              ":focus": {
+                "background-color": "#0c6058"
+              }
+            }
+          }
+        }
+      },
+            });
+          });
+        }
+      })();
+      /*]]>*/
+      </script>
     </div>
   </div>
 </section>
