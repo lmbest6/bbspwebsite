@@ -8,19 +8,60 @@
 <link rel="stylesheet" href="styles.css">
 <style>
   body { background: var(--iron); }
+
   .schedule-page { padding: 120px 52px 80px; max-width: 1200px; margin: 0 auto; }
-  .schedule-page-header { margin-bottom: 48px; }
+
+  .schedule-page-header { margin-bottom: 56px; }
   .schedule-page-header .section-tag { margin-bottom: 12px; }
   .schedule-page-header h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 3.2rem; letter-spacing: 0.04em; text-transform: uppercase; color: white; line-height: 1; margin-bottom: 16px; }
-  .schedule-page-header p { font-size: 1.05rem; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 560px; line-height: 1.7; }
+  .schedule-page-header p { font-size: 1.05rem; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 600px; line-height: 1.7; }
   .schedule-meta { display: flex; gap: 32px; margin-top: 24px; flex-wrap: wrap; }
   .schedule-meta-item { display: flex; align-items: center; gap: 10px; font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
   .schedule-meta-item span { color: var(--teal-bright); }
-  .schedule-frame-wrap { border: 1px solid rgba(13,107,98,0.35); border-radius: 4px; overflow: hidden; background: #fff; }
-  .schedule-frame-wrap iframe { display: block; }
-  @media (max-width: 768px) {
+
+  /* WEEKLY GRID */
+  .week-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 48px; }
+
+  .day-col { background: #1a1a1a; border: 1px solid rgba(13,107,98,0.25); border-radius: 6px; overflow: hidden; }
+
+  .day-header { background: rgba(13,107,98,0.18); border-bottom: 1px solid rgba(13,107,98,0.35); padding: 14px 12px 12px; text-align: center; }
+  .day-name { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 0.14em; text-transform: uppercase; color: white; }
+  .day-sub { font-family: "Barlow Condensed", sans-serif; font-weight: 400; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-bright); margin-top: 3px; }
+
+  .day-classes { padding: 12px 10px; display: flex; flex-direction: column; gap: 8px; }
+
+  .class-pill { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 10px 12px; text-align: center; transition: background 0.2s, border-color 0.2s; }
+  .class-pill:hover { background: rgba(13,107,98,0.15); border-color: rgba(13,107,98,0.5); }
+  .class-time { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.06em; color: white; }
+  .class-label { font-family: "Barlow", sans-serif; font-size: 0.7rem; color: rgba(255,255,255,0.35); margin-top: 2px; letter-spacing: 0.04em; }
+
+  /* Saturday special styling */
+  .day-col.saturday { border-color: rgba(13,107,98,0.5); }
+  .day-col.saturday .day-header { background: rgba(13,107,98,0.28); }
+  .day-col.saturday .class-pill { background: rgba(13,107,98,0.1); border-color: rgba(13,107,98,0.3); }
+  .day-col.saturday .class-pill:hover { background: rgba(13,107,98,0.25); border-color: rgba(13,107,98,0.6); }
+
+  .friends-badge { display: inline-block; margin-top: 10px; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-bright); background: rgba(13,107,98,0.2); border: 1px solid rgba(13,107,98,0.45); border-radius: 3px; padding: 4px 8px; }
+
+  /* SIGNUP CTA */
+  .signup-cta { background: linear-gradient(135deg, rgba(13,107,98,0.2) 0%, rgba(13,107,98,0.08) 100%); border: 1px solid rgba(13,107,98,0.4); border-radius: 8px; padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .signup-cta-text h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 2rem; letter-spacing: 0.04em; text-transform: uppercase; color: white; line-height: 1; margin-bottom: 10px; }
+  .signup-cta-text p { font-size: 1rem; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 480px; line-height: 1.6; }
+  .signup-btn { display: inline-block; background: var(--teal); color: white; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; padding: 16px 36px; border-radius: 4px; transition: background 0.2s, transform 0.15s; white-space: nowrap; }
+  .signup-btn:hover { background: var(--teal-light); transform: translateY(-1px); }
+
+  /* FREE badge */
+  .free-note { margin-top: 24px; font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); text-align: center; }
+  .free-note strong { color: var(--teal-bright); }
+
+  @media (max-width: 900px) {
+    .week-grid { grid-template-columns: repeat(3, 1fr); }
     .schedule-page { padding: 100px 20px 60px; }
-    .schedule-page-header h1 { font-size: 2.2rem; }
+    .schedule-page-header h1 { font-size: 2.4rem; }
+    .signup-cta { padding: 28px 24px; }
+  }
+  @media (max-width: 560px) {
+    .week-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -34,27 +75,124 @@
   </a>
   <ul class="nav-links">
     <li><a href="index.html#mission">Mission</a></li>
-    <li><a href="index.html#programs">Programs</a></li>
-    <li><a href="index.html#houses">Houses</a></li>
-    <li><a href="index.html#partners">Partner With Us</a></li>
-    <li><a href="index.html#donate" class="nav-donate">Donate</a></li>
+    <li><a href="houses.html">Houses</a></li>
+    <li><a href="partners.html">Partners</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="get-involved.html">Get Involved</a></li>
+    <li><a href="https://thebbsp.myshopify.com" target="_blank" rel="noopener">Shop</a></li>
+    <li><a href="get-involved.html#donate" class="nav-donate">Donate</a></li>
   </ul>
 </nav>
 
 <div class="schedule-page">
+
   <div class="schedule-page-header">
     <div class="section-tag">Class Schedule</div>
     <h1>Join a Free Class</h1>
-    <p>All classes are free and open to the community — no recovery requirement, no insurance, no cost. Just show up.</p>
+    <p>All classes are free and open to the community — no insurance, no cost. Just show up. <strong style="color:rgba(255,255,255,0.7);">48 hours of sobriety is required for attendance.</strong></p>
     <div class="schedule-meta">
-      <div class="schedule-meta-item"><span>&#128205;</span> Phoenix, AZ &mdash; The Barbell Saves Project</div>
+      <div class="schedule-meta-item"><span>&#128205;</span> Phoenix, AZ</div>
       <div class="schedule-meta-item"><span>&#10084;</span> Always Free &middot; Open to All</div>
     </div>
   </div>
-  <div class="schedule-frame-wrap">
-    <iframe width="100%" height="800px" src="https://go.streamfit.com/embed/schedule/706-the-barbell-saves-project" frameBorder="0" noresize="noresize"></iframe>
+
+  <!-- WEEKLY GRID -->
+  <div class="week-grid">
+
+    <!-- Monday -->
+    <div class="day-col">
+      <div class="day-header">
+        <div class="day-name">Monday</div>
+      </div>
+      <div class="day-classes">
+        <div class="class-pill"><div class="class-time">5:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">6:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">7:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">4:30 PM</div></div>
+      </div>
+    </div>
+
+    <!-- Tuesday -->
+    <div class="day-col">
+      <div class="day-header">
+        <div class="day-name">Tuesday</div>
+      </div>
+      <div class="day-classes">
+        <div class="class-pill"><div class="class-time">5:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">6:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">7:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">4:30 PM</div></div>
+        <div class="class-pill"><div class="class-time">5:30 PM</div></div>
+      </div>
+    </div>
+
+    <!-- Wednesday -->
+    <div class="day-col">
+      <div class="day-header">
+        <div class="day-name">Wednesday</div>
+      </div>
+      <div class="day-classes">
+        <div class="class-pill"><div class="class-time">5:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">6:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">7:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">4:30 PM</div></div>
+      </div>
+    </div>
+
+    <!-- Thursday -->
+    <div class="day-col">
+      <div class="day-header">
+        <div class="day-name">Thursday</div>
+      </div>
+      <div class="day-classes">
+        <div class="class-pill"><div class="class-time">5:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">6:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">7:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">4:30 PM</div></div>
+        <div class="class-pill"><div class="class-time">5:30 PM</div></div>
+      </div>
+    </div>
+
+    <!-- Friday -->
+    <div class="day-col">
+      <div class="day-header">
+        <div class="day-name">Friday</div>
+      </div>
+      <div class="day-classes">
+        <div class="class-pill"><div class="class-time">5:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">6:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">7:30 AM</div></div>
+        <div class="class-pill"><div class="class-time">4:30 PM</div></div>
+      </div>
+    </div>
+
+    <!-- Saturday -->
+    <div class="day-col saturday">
+      <div class="day-header">
+        <div class="day-name">Saturday</div>
+        <div class="day-sub">Friends &amp; Family Day</div>
+      </div>
+      <div class="day-classes">
+        <div class="class-pill"><div class="class-time">8:00 AM</div></div>
+        <div class="class-pill"><div class="class-time">9:30 AM</div></div>
+        <div style="text-align:center;"><span class="friends-badge">&#127942; Bring Everyone</span></div>
+      </div>
+    </div>
+
+  </div><!-- /week-grid -->
+
+  <p class="free-note">All classes are <strong>100% free</strong> — no membership, no sign-in required. Walk-ins always welcome.</p>
+
+  <!-- SIGNUP CTA -->
+  <div class="signup-cta" style="margin-top: 48px;">
+    <div class="signup-cta-text">
+      <h2>Ready to Start?</h2>
+      <p>Create a free account to track your classes and stay connected with the Barbell Saves Project community.</p>
+    </div>
+    <a href="https://move.streamfit.com/app-onboarding?gym=706" target="_blank" rel="noopener" class="signup-btn">Sign Up Free &rarr;</a>
   </div>
-</div>
+
+</div><!-- /schedule-page -->
 
 <script src="script.js"></script>
 </body>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partners — Barbell Saves Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .partners-header { background: var(--iron); padding: 120px 52px 64px; border-bottom: 1px solid rgba(13,107,98,0.3); }
+  .partners-header-inner { max-width: 1200px; margin: 0 auto; }
+  .partners-header .section-tag { margin-bottom: 12px; }
+  .partners-header h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 3.2rem; letter-spacing: 0.04em; text-transform: uppercase; color: white; line-height: 1; margin-bottom: 16px; }
+  .partners-header p { font-size: 1.05rem; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 620px; line-height: 1.7; }
+
+  /* ORG NETWORK */
+  .org-network { background: var(--off-white); padding: 80px 52px; }
+  .org-network-inner { max-width: 1200px; margin: 0 auto; }
+  .org-network .section-tag { margin-bottom: 12px; }
+  .org-network h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 2.4rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--iron); margin-bottom: 12px; line-height: 1; }
+  .org-network > .org-network-inner > p { font-size: 1rem; color: #666; font-weight: 300; max-width: 580px; line-height: 1.7; margin-bottom: 48px; }
+  .org-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 48px; }
+  .org-card { background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; transition: box-shadow 0.2s, transform 0.2s; }
+  .org-card:hover { box-shadow: 0 12px 36px rgba(13,107,98,0.1); transform: translateY(-3px); }
+  .org-logo { height: 52px; display: flex; align-items: center; }
+  .org-logo img { max-height: 52px; max-width: 160px; width: auto; object-fit: contain; }
+  .org-card h4 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--iron); }
+  .org-card p { font-size: 0.85rem; color: #777; font-weight: 300; line-height: 1.6; }
+  .org-card-type { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); }
+
+  /* PARTNERSHIP TYPES */
+  .how-we-work { background: var(--off-white); padding: 80px 52px; }
+  .how-we-work-inner { max-width: 1200px; margin: 0 auto; }
+  .how-we-work .section-tag { margin-bottom: 12px; }
+  .how-we-work h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 2.4rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--iron); margin-bottom: 12px; line-height: 1; }
+  .how-we-work > .how-we-work-inner > p { font-size: 1rem; color: #777; font-weight: 300; max-width: 580px; line-height: 1.7; margin-bottom: 48px; }
+  .work-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .work-card { background: white; border: 1px solid rgba(0,0,0,0.07); border-top: 4px solid var(--teal); border-radius: 0 0 6px 6px; padding: 32px 28px; }
+  .work-card-num { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 2rem; letter-spacing: 0.04em; color: rgba(13,107,98,0.15); margin-bottom: 12px; line-height: 1; }
+  .work-card h3 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.35rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--iron); margin-bottom: 12px; line-height: 1.1; }
+  .work-card p { font-size: 0.88rem; color: #666; font-weight: 300; line-height: 1.75; margin-bottom: 20px; }
+  .work-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .work-list li { font-size: 0.85rem; color: #555; font-weight: 400; display: flex; align-items: baseline; gap: 8px; line-height: 1.5; }
+  .work-list li::before { content: "→"; color: var(--teal); flex-shrink: 0; font-weight: 700; }
+
+  /* JOIN CTA */
+  .join-cta { background: var(--off-white); padding: 80px 52px; }
+  .join-cta-inner { max-width: 1200px; margin: 0 auto; background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; padding: 56px 64px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  .join-cta-text .section-tag { margin-bottom: 12px; }
+  .join-cta-text h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 2.2rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--iron); line-height: 1; margin-bottom: 12px; }
+  .join-cta-text p { font-size: 1rem; color: #666; font-weight: 300; max-width: 480px; line-height: 1.7; }
+  .join-btn { display: inline-block; background: var(--teal); color: white; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; padding: 18px 40px; border-radius: 4px; transition: background 0.2s, transform 0.15s; white-space: nowrap; }
+  .join-btn:hover { background: var(--teal-light); transform: translateY(-1px); }
+
+  @media (max-width: 900px) {
+    .partners-header, .org-network, .how-we-work, .join-cta { padding-left: 20px; padding-right: 20px; }
+    .partners-header { padding-top: 100px; padding-bottom: 48px; }
+    .partners-header h1 { font-size: 2.2rem; }
+    .org-grid, .work-types { grid-template-columns: 1fr; }
+    .join-cta-inner { padding: 36px 28px; flex-direction: column; }
+  }
+  @media (min-width: 560px) and (max-width: 900px) {
+    .org-grid { grid-template-columns: repeat(2, 1fr); }
+    .work-types { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/image1.png" alt="The Barbell Saves Project">
+    <div class="nav-logo-text">Barbell Saves<span>Project</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#mission">Mission</a></li>
+    <li><a href="houses.html">Houses</a></li>
+    <li><a href="partners.html">Partners</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="get-involved.html">Get Involved</a></li>
+    <li><a href="https://thebbsp.myshopify.com" target="_blank" rel="noopener">Shop</a></li>
+    <li><a href="get-involved.html#donate" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<div class="partners-header">
+  <div class="partners-header-inner">
+    <div class="section-tag">Our Network</div>
+    <h1>Organizations<br>We Work With</h1>
+    <p>We collaborate with treatment centers, clinical networks, and community organizations across Phoenix to bring movement-based recovery programming where it's needed most.</p>
+    <a href="mailto:info@thebarbellsavesproject.org" style="display:inline-block;margin-top:28px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal-bright);border:1.5px solid rgba(13,107,98,0.5);padding:12px 28px;border-radius:3px;text-decoration:none;transition:background 0.2s,border-color 0.2s;" onmouseover="this.style.background='rgba(13,107,98,0.15)';this.style.borderColor='var(--teal-bright)'" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(13,107,98,0.5)'">Get in Touch &rarr;</a>
+  </div>
+</div>
+
+<!-- ORG NETWORK -->
+<section class="org-network">
+  <div class="org-network-inner">
+    <div class="section-tag">Clinical &amp; Community Partners</div>
+    <h2>Trusted by the<br>Organizations That Matter</h2>
+    <p>These organizations refer clients to our programming, house our residents, and collaborate with us to close the gap between treatment and long-term recovery.</p>
+
+    <div class="org-grid">
+
+      <div class="org-card">
+        <div class="org-logo"><img src="images/logo-otc.png" alt="Barbell Saves Outpatient Center"></div>
+        <div class="org-card-type">Mental Health &amp; Substance Use IOP</div>
+        <h4>Barbell Saves Outpatient Center</h4>
+        <p>Our own intensive outpatient program offering mental health and substance use treatment — with a direct bridge into our community programming and recovery housing.</p>
+      </div>
+
+      <div class="org-card">
+        <div class="org-logo"><img src="images/logo-axiom.png" alt="Axiom"></div>
+        <div class="org-card-type">Treatment Center</div>
+        <h4>Axiom</h4>
+        <p>Clinical partner providing referrals for individuals transitioning from treatment into structured sober living and community programming.</p>
+      </div>
+
+      <div class="org-card">
+        <div class="org-logo"><img src="images/logo-sanctuary.webp" alt="Sanctuary"></div>
+        <div class="org-card-type">Recovery &amp; Wellness</div>
+        <h4>Sanctuary</h4>
+        <p>Collaborative partner supporting holistic recovery through shared clients, referrals, and community programming alignment.</p>
+      </div>
+
+      <div class="org-card">
+        <div class="org-logo"><img src="images/logo-horizon.jpg" alt="Horizon Health"></div>
+        <div class="org-card-type">Behavioral Health</div>
+        <h4>Horizon Health</h4>
+        <p>Behavioral health partner connecting clients in need of structured activity and peer support with our free community programming.</p>
+      </div>
+
+      <div class="org-card">
+        <div class="org-logo"><img src="images/logo-trinity.png" alt="Trinity"></div>
+        <div class="org-card-type">Justice &amp; Recovery</div>
+        <h4>Trinity</h4>
+        <p>Partnership focused on court-involved individuals seeking pro-social activities, community service fulfillment, and recovery support.</p>
+      </div>
+
+      <div class="org-card">
+        <div class="org-logo"><img src="images/logo-circlethacity.png" alt="Circle the City" style="filter: invert(1);"></div>
+        <div class="org-card-type">Community Health</div>
+        <h4>Circle the City</h4>
+        <p>Serving individuals experiencing homelessness and instability — we work alongside Circle the City to provide health-supportive programming and referral pathways.</p>
+      </div>
+
+      <div class="org-card">
+        <div class="org-logo"><img src="images/logo-cms.svg" alt="Community Medical Services"></div>
+        <div class="org-card-type">Medical Services</div>
+        <h4>Community Medical Services</h4>
+        <p>Clinical referral partner bridging medication-assisted treatment with the peer support and structured activity that sustains long-term recovery.</p>
+      </div>
+
+      <div class="org-card">
+        <div class="org-logo"><img src="images/logo-hopehigh.png" alt="Hope High Online"></div>
+        <div class="org-card-type">Education</div>
+        <h4>Hope High Online</h4>
+        <p>Arizona-based online high school providing flexible diploma and GED pathways for individuals in recovery who need to complete their education on their own timeline.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO STRIP -->
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
+  <div style="overflow:hidden;height:260px;"><img src="images/image5.jpg" alt="Barbell Saves partners" style="width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.8) saturate(0.85);transition:filter 0.3s;" onmouseover="this.style.filter='brightness(1) saturate(1)'" onmouseout="this.style.filter='brightness(0.8) saturate(0.85)'"></div>
+  <div style="overflow:hidden;height:260px;"><img src="images/image6.jpg" alt="Barbell Saves community" style="width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.8) saturate(0.85);transition:filter 0.3s;" onmouseover="this.style.filter='brightness(1) saturate(1)'" onmouseout="this.style.filter='brightness(0.8) saturate(0.85)'"></div>
+  <div style="overflow:hidden;height:260px;"><img src="images/image7.jpg" alt="Barbell Saves team" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(0.8) saturate(0.85);transition:filter 0.3s;" onmouseover="this.style.filter='brightness(1) saturate(1)'" onmouseout="this.style.filter='brightness(0.8) saturate(0.85)'"></div>
+</div>
+
+<!-- STATS BAND -->
+<div style="background:var(--iron);padding:48px 52px;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center;">
+    <div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.8rem;color:var(--teal-bright);letter-spacing:0.02em;">8+</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.82rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:6px;">Partner Organizations</div>
+    </div>
+    <div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.8rem;color:var(--teal-bright);letter-spacing:0.02em;">4</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.82rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:6px;">Recovery Houses</div>
+    </div>
+    <div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.8rem;color:var(--teal-bright);letter-spacing:0.02em;">$0</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.82rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:6px;">Cost to Clients</div>
+    </div>
+    <div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.8rem;color:var(--teal-bright);letter-spacing:0.02em;">3</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.82rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:6px;">Partnership Types</div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW WE WORK -->
+<section class="how-we-work">
+  <div class="how-we-work-inner">
+    <div class="section-tag">Partnership Types</div>
+    <h2>How We Work<br>With Organizations</h2>
+    <p>We customize every partnership to your population and setting. Here's how we typically engage.</p>
+
+    <div class="work-types">
+
+      <div class="work-card">
+        <div class="work-card-num">01</div>
+        <h3>Treatment Centers &amp; Clinical Partners</h3>
+        <p>We integrate alongside your clinical team to provide movement-based programming and certified peer support as a complement to IOP, residential, or outpatient treatment.</p>
+        <ul class="work-list">
+          <li>Peer support co-facilitation alongside clinical staff</li>
+          <li>Group fitness sessions on-site or at our facility</li>
+          <li>Client referrals into sober living and community classes</li>
+          <li>Trauma-informed coaching at every session</li>
+        </ul>
+      </div>
+
+      <div class="work-card">
+        <div class="work-card-num">02</div>
+        <h3>Employers &amp; Community Organizations</h3>
+        <p>We bring fitness, wellness, and peer support programming to workplaces and community organizations — meeting people where they are, regardless of their recovery status.</p>
+        <ul class="work-list">
+          <li>Workplace fitness and wellness events</li>
+          <li>Mental health awareness programming</li>
+          <li>Community outreach and stigma reduction</li>
+          <li>Flexible scheduling for any setting</li>
+        </ul>
+      </div>
+
+      <div class="work-card">
+        <div class="work-card-num">03</div>
+        <h3>Justice &amp; Corrections</h3>
+        <p>We work directly with court-involved individuals to provide structured, pro-social programming that supports their recovery and fulfills court requirements. Our team knows the system and shows up for clients navigating it.</p>
+        <ul class="work-list">
+          <li>Community service support</li>
+          <li>Pro-social activities that fulfill court requirements</li>
+          <li>Court navigation assistance and advocacy</li>
+          <li>Drug court, probation, and reentry programming</li>
+          <li>Peer specialists with lived justice-involvement experience</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA BAND -->
+<div class="cta-band" style="position:relative;">
+  <div style="position:absolute;inset:0;background-image:url('images/image9.jpg');background-size:cover;background-position:center 30%;filter:brightness(0.15) saturate(0.6);"></div>
+  <div class="cta-band-inner">
+    <h2>Let's Build Something Together</h2>
+    <p>Whether you're a treatment center, employer, or justice program — if you serve people who need support, there's a place for you in this network.</p>
+    <div class="cta-btns">
+      <a href="mailto:info@thebarbellsavesproject.org" class="btn-primary">&#9993;&nbsp; Start the Conversation</a>
+      <a href="get-involved.html#donate" class="btn-secondary" style="border-color:rgba(255,255,255,0.4);">Support the Mission</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="images/image8.png" alt="The Barbell Saves Project">
+      <div class="footer-501c3">501(c)(3) Nonprofit Organization &middot; EIN: 84-3982601</div>
+      <p>Using the power of movement, peer support, and community to help people in recovery build lives worth staying sober for &#8212; at zero cost to participants.</p>
+      <div class="social-row">
+        <a href="#" class="social-icon">f</a>
+        <a href="#" class="social-icon">in</a>
+        <a href="#" class="social-icon">ig</a>
+        <a href="#" class="social-icon">tw</a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Programs</h5><ul><li><a href="schedule.html">Community Classes</a></li><li><a href="houses.html">Recovery Houses</a></li><li><a href="partners.html">Partner Classes</a></li><li><a href="schedule.html">Class Schedule</a></li></ul></div>
+    <div class="footer-col"><h5>Get Involved</h5><ul><li><a href="get-involved.html#donate">Donate</a></li><li><a href="get-involved.html#sponsors">Become a Sponsor</a></li><li><a href="partners.html">Partner With Us</a></li><li><a href="#">Volunteer</a></li><li><a href="#">Refer a Client</a></li></ul></div>
+    <div class="footer-col"><h5>Organization</h5><ul><li><a href="#">About Us</a></li><li><a href="#">Our Team</a></li><li><a href="#">Contact</a></li><li><a href="#">Clinical Center (TBSOP)</a></li><li><a href="#">Annual Report</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>&#169; 2025 Barbell Saves Project &middot; All rights reserved &middot; <a href="#">Privacy Policy</a></p>
+    <p>Barbell Saves Project is a registered 501(c)(3) nonprofit. Donations are tax-deductible to the full extent of the law.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
