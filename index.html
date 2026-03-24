@@ -201,15 +201,17 @@
 
 <!-- SHOP THE MISSION -->
 <section style="background:var(--iron);padding:80px 52px;border-top:1px solid rgba(13,107,98,0.25);">
-  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:64px;justify-content:space-between;flex-wrap:wrap;">
-    <div style="flex:1;min-width:300px;">
-      <div class="section-tag">Merch</div>
-      <h2 class="section-title" style="color:white;">Wear the<br>Mission.</h2>
-      <p style="font-size:1rem;color:rgba(255,255,255,0.55);font-weight:300;line-height:1.75;max-width:520px;margin-bottom:32px;">Our gear isn't just apparel &mdash; it's a statement. Every purchase funds free classes, peer support, and housing for people rebuilding their lives.</p>
-      <a href="https://thebbsp.myshopify.com" target="_blank" rel="noopener" class="btn-primary">Shop Now &nbsp;&#8594;</a>
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:48px;">
+      <div>
+        <div class="section-tag">Merch</div>
+        <h2 class="section-title" style="color:white;margin-bottom:12px;">Wear the<br>Mission.</h2>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.55);font-weight:300;line-height:1.75;max-width:520px;margin:0;">Our gear isn't just apparel &mdash; it's a statement. Every purchase funds free classes, peer support, and housing for people rebuilding their lives.</p>
+      </div>
+      <a href="https://thebbsp.myshopify.com" target="_blank" rel="noopener" class="btn-primary" style="flex-shrink:0;">View Full Shop &nbsp;&#8594;</a>
     </div>
-    <div style="flex:0 0 auto;min-width:280px;">
-      <div id='product-component-1774379873838'></div>
+    <div>
+      <div id='collection-component-1774380350847'></div>
       <script type="text/javascript">
       /*<![CDATA[*/
       (function () {
@@ -236,9 +238,9 @@
             storefrontAccessToken: 'b79e62a882fbdc2cb584bd9b56240469',
           });
           ShopifyBuy.UI.onReady(client).then(function (ui) {
-            ui.createComponent('product', {
-              id: '10109571465492',
-              node: document.getElementById('product-component-1774379873838'),
+            ui.createComponent('collection', {
+              id: '459797070100',
+              node: document.getElementById('collection-component-1774380350847'),
               moneyFormat: '%24%7B%7Bamount%7D%7D',
               options: {
         "product": {
@@ -247,18 +249,34 @@
               "@media (min-width: 601px)": {
                 "max-width": "calc(25% - 20px)",
                 "margin-left": "20px",
-                "margin-bottom": "50px"
+                "margin-bottom": "50px",
+                "width": "calc(25% - 20px)"
+              },
+              "img": {
+                "height": "calc(100% - 15px)",
+                "position": "absolute",
+                "left": "0",
+                "right": "0",
+                "top": "0"
+              },
+              "imgWrapper": {
+                "padding-top": "calc(75% + 15px)",
+                "position": "relative",
+                "height": "0"
               }
             },
             "button": {
-              "background-color": "#0d6b62",
               ":hover": {
                 "background-color": "#0c6058"
               },
+              "background-color": "#0d6b62",
               ":focus": {
                 "background-color": "#0c6058"
               }
             }
+          },
+          "text": {
+            "button": "Add to cart"
           }
         },
         "productSet": {
@@ -273,7 +291,9 @@
         "modalProduct": {
           "contents": {
             "img": false,
-            "imgWithCarousel": true
+            "imgWithCarousel": true,
+            "button": false,
+            "buttonWithQuantity": true
           },
           "styles": {
             "product": {
@@ -284,27 +304,35 @@
               }
             },
             "button": {
-              "background-color": "#0d6b62",
               ":hover": {
                 "background-color": "#0c6058"
               },
+              "background-color": "#0d6b62",
               ":focus": {
                 "background-color": "#0c6058"
               }
             }
+          },
+          "text": {
+            "button": "Add to cart"
           }
         },
+        "option": {},
         "cart": {
           "styles": {
             "button": {
-              "background-color": "#0d6b62",
               ":hover": {
                 "background-color": "#0c6058"
               },
+              "background-color": "#0d6b62",
               ":focus": {
                 "background-color": "#0c6058"
               }
             }
+          },
+          "text": {
+            "total": "Subtotal",
+            "button": "Checkout"
           }
         },
         "toggle": {
