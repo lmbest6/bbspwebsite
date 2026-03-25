@@ -31,6 +31,27 @@
     .peer-intro-callouts { grid-template-columns: 1fr; }
   }
 
+  /* ─── PHOTO BANNER ─── */
+  .photo-banner { width: 100%; height: 480px; overflow: hidden; position: relative; }
+  .photo-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+
+  /* ─── PHOTO STRIP ─── */
+  .photo-strip { display: grid; grid-template-columns: repeat(5, 1fr); height: 260px; overflow: hidden; }
+  .photo-strip-item { overflow: hidden; }
+  .photo-strip-item img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.4s ease; }
+  .photo-strip-item:hover img { transform: scale(1.05); }
+
+  /* ─── SECTION PHOTO INSERT ─── */
+  .section-photo-insert { width: 100%; border-radius: 6px; overflow: hidden; margin-top: 40px; height: 380px; }
+  .section-photo-insert img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; }
+
+  @media (max-width: 860px) {
+    .photo-banner { height: 280px; }
+    .photo-strip { grid-template-columns: repeat(3, 1fr); height: 180px; }
+    .photo-strip-item:nth-child(4), .photo-strip-item:nth-child(5) { display: none; }
+    .section-photo-insert { height: 240px; }
+  }
+
   /* ─── PILLARS BAND ─── */
   .pillars-band { background: var(--teal); padding: 52px; }
   .pillars-band-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
@@ -158,6 +179,11 @@
   </div>
 </section>
 
+<!-- PHOTO BANNER -->
+<div class="photo-banner">
+  <img src="images/services-action-1.jpg" alt="Barbell Saves Project community class in action">
+</div>
+
 <!-- PEER SUPPORT EXPLAINER -->
 <section class="services-section peer-intro-section" id="peer-support">
   <div class="services-section-inner">
@@ -170,25 +196,18 @@
         <p style="font-size: 0.95rem; color: #666; font-weight: 300; line-height: 1.8; margin-bottom: 0;">At Barbell Saves Project, peer support is woven into everything we do. It shows up in every class, every conversation, and every connection made on the floor. It's also a <strong>real career pathway</strong> &#8212; we train and place peer support specialists so that the people who once needed help become the ones giving it.</p>
       </div>
       <div class="peer-intro-callouts">
+        <div style="grid-column: 1 / -1; border-radius: 6px; overflow: hidden; height: 240px; margin-bottom: 4px;">
+          <img src="images/services-action-3.jpg" alt="Member goals board at Barbell Saves Project" style="width:100%; height:100%; object-fit:cover; object-position: center; display:block;">
+        </div>
         <div class="peer-callout">
           <div class="peer-callout-icon">&#129309;</div>
           <h4>Lived Experience</h4>
           <p>Peer supporters bring something no credential can replicate &#8212; they know what it actually feels like.</p>
         </div>
         <div class="peer-callout">
-          <div class="peer-callout-icon">&#128172;</div>
-          <h4>Non-Clinical Connection</h4>
-          <p>No clipboard, no judgment. Just honest, human connection from someone who has walked the same road.</p>
-        </div>
-        <div class="peer-callout">
           <div class="peer-callout-icon">&#127919;</div>
           <h4>Goal-Oriented Support</h4>
           <p>Peer supporters help individuals set goals, navigate systems, and stay accountable &#8212; one step at a time.</p>
-        </div>
-        <div class="peer-callout">
-          <div class="peer-callout-icon">&#128200;</div>
-          <h4>Proven Outcomes</h4>
-          <p>Research consistently shows that peer support improves treatment engagement, reduces relapse, and builds lasting recovery capital.</p>
         </div>
       </div>
     </div>
@@ -222,6 +241,15 @@
   </div>
 </div>
 
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <div class="photo-strip-item"><img src="images/services-aug-3.jpg" alt="Class at Barbell Saves Project gym"></div>
+  <div class="photo-strip-item"><img src="images/services-action-4.jpg" alt="Athlete on air bike"></div>
+  <div class="photo-strip-item"><img src="images/services-aug-1.jpg" alt="Athlete on gymnastics rings"></div>
+  <div class="photo-strip-item"><img src="images/services-action-5.jpg" alt="Partner medicine ball exercise"></div>
+  <div class="photo-strip-item"><img src="images/services-action-2.jpg" alt="Coach leading class warmup"></div>
+</div>
+
 <!-- FITNESS-BASED RECOVERY -->
 <section class="services-section fitness-section" id="fitness">
   <div class="services-section-inner">
@@ -251,6 +279,9 @@
           <a href="schedule.html" class="btn-secondary" style="display:inline-block;">View Full Schedule &nbsp;&#8594;</a>
         </div>
       </div>
+    </div>
+    <div class="section-photo-insert">
+      <img src="images/services-aug-2.jpg" alt="Rob Best, founder of Barbell Saves Project">
     </div>
   </div>
 </section>
