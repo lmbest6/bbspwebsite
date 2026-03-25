@@ -16,6 +16,21 @@
   .services-header h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 3.2rem; letter-spacing: 0.04em; text-transform: uppercase; color: white; line-height: 1; margin-bottom: 16px; }
   .services-header p { font-size: 1.05rem; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 640px; line-height: 1.7; }
 
+  /* ─── PEER SUPPORT INTRO ─── */
+  .peer-intro-section { background: var(--off-white); }
+  .peer-intro-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .peer-intro-callouts { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-top: 8px; }
+  .peer-callout { background: white; border: 1px solid rgba(0,0,0,0.08); border-top: 4px solid var(--teal); border-radius: 0 0 6px 6px; padding: 28px 24px; }
+  .peer-callout-icon { font-size: 1.6rem; margin-bottom: 12px; }
+  .peer-callout h4 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--iron); margin-bottom: 8px; }
+  .peer-callout p { font-size: 0.85rem; color: #777; font-weight: 300; line-height: 1.7; margin: 0; }
+  @media (max-width: 1024px) {
+    .peer-intro-layout { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 600px) {
+    .peer-intro-callouts { grid-template-columns: 1fr; }
+  }
+
   /* ─── PILLARS BAND ─── */
   .pillars-band { background: var(--teal); padding: 52px; }
   .pillars-band-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
@@ -140,6 +155,43 @@
     <div class="section-tag">What We Do</div>
     <h1>Our Services</h1>
     <p>Recovery is more than sobriety &#8212; it's rebuilding a life. We walk alongside our community every step of the way: from their first class to their first paycheck, first license, and first career.</p>
+  </div>
+</section>
+
+<!-- PEER SUPPORT EXPLAINER -->
+<section class="services-section peer-intro-section" id="peer-support">
+  <div class="services-section-inner">
+    <div class="peer-intro-layout">
+      <div class="peer-intro-copy">
+        <div class="section-tag">The Foundation of Everything We Do</div>
+        <h2 style="color: var(--iron);">What Is<br>Peer Support?</h2>
+        <p class="section-intro" style="color: #666; margin-bottom: 28px;">Peer support is one of the most powerful tools in addiction recovery &#8212; and it's built on a simple truth: <strong>people in recovery help each other best.</strong></p>
+        <p style="font-size: 0.95rem; color: #666; font-weight: 300; line-height: 1.8; margin-bottom: 20px;">A <strong>Peer Support Specialist</strong> is someone who has lived experience with addiction or mental health challenges and has been trained to use that experience to help others navigate their own recovery journey. They are not therapists or clinicians &#8212; they are people who have been there, made it through, and are now walking alongside someone else who is just starting out.</p>
+        <p style="font-size: 0.95rem; color: #666; font-weight: 300; line-height: 1.8; margin-bottom: 0;">At Barbell Saves Project, peer support is woven into everything we do. It shows up in every class, every conversation, and every connection made on the floor. It's also a <strong>real career pathway</strong> &#8212; we train and place peer support specialists so that the people who once needed help become the ones giving it.</p>
+      </div>
+      <div class="peer-intro-callouts">
+        <div class="peer-callout">
+          <div class="peer-callout-icon">&#129309;</div>
+          <h4>Lived Experience</h4>
+          <p>Peer supporters bring something no credential can replicate &#8212; they know what it actually feels like.</p>
+        </div>
+        <div class="peer-callout">
+          <div class="peer-callout-icon">&#128172;</div>
+          <h4>Non-Clinical Connection</h4>
+          <p>No clipboard, no judgment. Just honest, human connection from someone who has walked the same road.</p>
+        </div>
+        <div class="peer-callout">
+          <div class="peer-callout-icon">&#127919;</div>
+          <h4>Goal-Oriented Support</h4>
+          <p>Peer supporters help individuals set goals, navigate systems, and stay accountable &#8212; one step at a time.</p>
+        </div>
+        <div class="peer-callout">
+          <div class="peer-callout-icon">&#128200;</div>
+          <h4>Proven Outcomes</h4>
+          <p>Research consistently shows that peer support improves treatment engagement, reduces relapse, and builds lasting recovery capital.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
