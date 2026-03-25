@@ -109,14 +109,18 @@
   .jobs-item-copy strong { display: block; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: white; margin-bottom: 3px; }
   .jobs-item-copy span { font-size: 0.85rem; color: rgba(255,255,255,0.5); font-weight: 300; line-height: 1.6; }
 
+  /* ─── SECTION DIVIDER PHOTO ─── */
+  .divider-photo { width: 100%; height: 320px; overflow: hidden; }
+  .divider-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; }
+
   /* ─── QCO HIGHLIGHT ─── */
-  .qco-band { background: rgba(13,107,98,0.12); border-top: 1px solid rgba(13,107,98,0.25); border-bottom: 1px solid rgba(13,107,98,0.25); padding: 52px; }
+  .qco-band { background: var(--off-white); border-top: 4px solid var(--teal); padding: 64px 52px; }
   .qco-band-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
   .qco-copy { }
   .qco-copy .section-tag { margin-bottom: 10px; }
-  .qco-copy h3 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 2rem; text-transform: uppercase; letter-spacing: 0.04em; color: white; line-height: 1.1; margin-bottom: 12px; }
-  .qco-copy p { font-size: 0.95rem; color: rgba(255,255,255,0.55); font-weight: 300; line-height: 1.75; max-width: 620px; margin: 0; }
-  .qco-copy p strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+  .qco-copy h3 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 2rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--iron); line-height: 1.1; margin-bottom: 12px; }
+  .qco-copy p { font-size: 0.95rem; color: #666; font-weight: 300; line-height: 1.75; max-width: 620px; margin: 0; }
+  .qco-copy p strong { color: var(--iron); font-weight: 600; }
   .qco-actions { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; flex-shrink: 0; }
 
   /* ─── CTA ─── */
@@ -136,6 +140,7 @@
   }
   @media (max-width: 860px) {
     .services-header, .pillars-band, .services-section, .qco-band, .services-cta { padding-left: 20px; padding-right: 20px; }
+    .divider-photo { height: 200px; }
     .services-header { padding-top: 100px; padding-bottom: 48px; }
     .services-header h1 { font-size: 2.4rem; }
     .services-section h2 { font-size: 2rem; }
@@ -390,8 +395,13 @@
   </div>
 </section>
 
+<!-- DIVIDER PHOTO -->
+<div class="divider-photo">
+  <img src="images/services-group-warmup.jpg" alt="Coach leading a Barbell Saves Project class">
+</div>
+
 <!-- QCO HIGHLIGHT -->
-<div class="qco-band" style="background: var(--iron);">
+<div class="qco-band">
   <div class="qco-band-inner">
     <div class="qco-copy">
       <div class="section-tag">Arizona QCO Tax Credit</div>
