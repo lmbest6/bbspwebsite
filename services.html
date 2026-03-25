@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Barbell Saves Project</title>
+<meta name="description" content="From group fitness and life skills to job training and placement — learn how the Barbell Saves Project walks alongside people in recovery every step of the way.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+
+  /* ─── PAGE HEADER ─── */
+  .services-header { background: var(--iron); padding: 120px 52px 64px; border-bottom: 1px solid rgba(13,107,98,0.3); }
+  .services-header-inner { max-width: 1200px; margin: 0 auto; }
+  .services-header .section-tag { margin-bottom: 12px; }
+  .services-header h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 3.2rem; letter-spacing: 0.04em; text-transform: uppercase; color: white; line-height: 1; margin-bottom: 16px; }
+  .services-header p { font-size: 1.05rem; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 640px; line-height: 1.7; }
+
+  /* ─── PILLARS BAND ─── */
+  .pillars-band { background: var(--teal); padding: 52px; }
+  .pillars-band-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .pillar { display: flex; align-items: flex-start; gap: 20px; }
+  .pillar-icon { width: 48px; height: 48px; background: rgba(255,255,255,0.15); border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.4rem; }
+  .pillar-copy { }
+  .pillar-copy h3 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.15rem; text-transform: uppercase; letter-spacing: 0.06em; color: white; margin-bottom: 6px; line-height: 1.1; }
+  .pillar-copy p { font-size: 0.88rem; color: rgba(255,255,255,0.75); font-weight: 300; line-height: 1.65; margin: 0; }
+
+  /* ─── SECTION SHARED ─── */
+  .services-section { padding: 80px 52px; }
+  .services-section-inner { max-width: 1200px; margin: 0 auto; }
+  .services-section .section-tag { margin-bottom: 12px; }
+  .services-section h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 2.4rem; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1; margin-bottom: 12px; }
+  .section-intro { font-size: 1rem; font-weight: 300; max-width: 640px; line-height: 1.75; margin-bottom: 52px; }
+
+  /* ─── FITNESS RECOVERY ─── */
+  .fitness-section { background: var(--iron); }
+  .fitness-section h2 { color: white; }
+  .fitness-section .section-intro { color: rgba(255,255,255,0.55); }
+  .fitness-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .fitness-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(13,107,98,0.25); border-top: 4px solid var(--teal); border-radius: 0 0 6px 6px; padding: 36px 32px; }
+  .fitness-card-icon { font-size: 2rem; margin-bottom: 18px; }
+  .fitness-card h3 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.35rem; text-transform: uppercase; letter-spacing: 0.04em; color: white; margin-bottom: 12px; line-height: 1.1; }
+  .fitness-card p { font-size: 0.92rem; color: rgba(255,255,255,0.55); font-weight: 300; line-height: 1.75; margin-bottom: 0; }
+  .fitness-card p strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+  .fitness-skills-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .skill-chip { background: rgba(13,107,98,0.18); border: 1px solid rgba(13,107,98,0.4); color: var(--teal); font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 12px; border-radius: 2px; }
+
+  /* ─── LIFE SKILLS ─── */
+  .lifeskills-section { background: var(--off-white); }
+  .lifeskills-section h2 { color: var(--iron); }
+  .lifeskills-section .section-intro { color: #666; }
+  .lifeskills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .ls-card { background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; transition: box-shadow 0.2s, transform 0.2s; }
+  .ls-card:hover { box-shadow: 0 10px 32px rgba(13,107,98,0.1); transform: translateY(-3px); }
+  .ls-card-icon { font-size: 1.8rem; }
+  .ls-card h3 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--iron); line-height: 1.1; }
+  .ls-card p { font-size: 0.88rem; color: #777; font-weight: 300; line-height: 1.7; margin: 0; }
+
+  /* ─── JOB TRAINING ─── */
+  .jobs-section { background: var(--iron); }
+  .jobs-section h2 { color: white; }
+  .jobs-section .section-intro { color: rgba(255,255,255,0.55); }
+  .jobs-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .jobs-track { background: rgba(255,255,255,0.04); border: 1px solid rgba(13,107,98,0.25); border-radius: 6px; padding: 40px 36px; }
+  .jobs-track-label { display: inline-block; background: var(--teal); color: white; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 14px; border-radius: 2px; margin-bottom: 20px; }
+  .jobs-track h3 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 1.7rem; text-transform: uppercase; letter-spacing: 0.04em; color: white; line-height: 1.05; margin-bottom: 16px; }
+  .jobs-track p { font-size: 0.92rem; color: rgba(255,255,255,0.55); font-weight: 300; line-height: 1.75; margin-bottom: 24px; }
+  .jobs-track p strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+  .jobs-items { display: flex; flex-direction: column; gap: 12px; }
+  .jobs-item { display: flex; align-items: flex-start; gap: 14px; }
+  .jobs-item-dot { width: 8px; height: 8px; background: var(--teal); border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+  .jobs-item-copy { }
+  .jobs-item-copy strong { display: block; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: white; margin-bottom: 3px; }
+  .jobs-item-copy span { font-size: 0.85rem; color: rgba(255,255,255,0.5); font-weight: 300; line-height: 1.6; }
+
+  /* ─── QCO HIGHLIGHT ─── */
+  .qco-band { background: rgba(13,107,98,0.12); border-top: 1px solid rgba(13,107,98,0.25); border-bottom: 1px solid rgba(13,107,98,0.25); padding: 52px; }
+  .qco-band-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+  .qco-copy { }
+  .qco-copy .section-tag { margin-bottom: 10px; }
+  .qco-copy h3 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 2rem; text-transform: uppercase; letter-spacing: 0.04em; color: white; line-height: 1.1; margin-bottom: 12px; }
+  .qco-copy p { font-size: 0.95rem; color: rgba(255,255,255,0.55); font-weight: 300; line-height: 1.75; max-width: 620px; margin: 0; }
+  .qco-copy p strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+  .qco-actions { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; flex-shrink: 0; }
+
+  /* ─── CTA ─── */
+  .services-cta { background: var(--iron); padding: 80px 52px; text-align: center; border-top: 1px solid rgba(13,107,98,0.3); }
+  .services-cta-inner { max-width: 720px; margin: 0 auto; }
+  .services-cta h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 2.6rem; text-transform: uppercase; letter-spacing: 0.04em; color: white; line-height: 1; margin-bottom: 16px; }
+  .services-cta p { font-size: 1rem; color: rgba(255,255,255,0.5); font-weight: 300; line-height: 1.75; margin-bottom: 36px; }
+  .services-cta .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    .pillars-band-inner { grid-template-columns: 1fr; gap: 28px; }
+    .fitness-layout, .jobs-layout { grid-template-columns: 1fr; }
+    .lifeskills-grid { grid-template-columns: repeat(2, 1fr); }
+    .qco-band-inner { grid-template-columns: 1fr; }
+    .qco-actions { align-items: flex-start; }
+  }
+  @media (max-width: 860px) {
+    .services-header, .pillars-band, .services-section, .qco-band, .services-cta { padding-left: 20px; padding-right: 20px; }
+    .services-header { padding-top: 100px; padding-bottom: 48px; }
+    .services-header h1 { font-size: 2.4rem; }
+    .services-section h2 { font-size: 2rem; }
+    .jobs-track { padding: 32px 24px; }
+  }
+  @media (max-width: 600px) {
+    .lifeskills-grid { grid-template-columns: 1fr; }
+    .services-cta h2 { font-size: 2rem; }
+    .services-cta .cta-actions { flex-direction: column; align-items: center; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/image1.png" alt="The Barbell Saves Project">
+    <div class="nav-logo-text">Barbell Saves<span>Project</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#mission">Mission</a></li>
+    <li><a href="houses.html">Houses</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="partners.html">Partners</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="get-involved.html">Get Involved</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="get-involved.html#donate" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="services-header">
+  <div class="services-header-inner">
+    <div class="section-tag">What We Do</div>
+    <h1>Our Services</h1>
+    <p>Recovery is more than sobriety &#8212; it's rebuilding a life. We walk alongside our community every step of the way: from their first class to their first paycheck, first license, and first career.</p>
+  </div>
+</section>
+
+<!-- THREE PILLARS BAND -->
+<div class="pillars-band">
+  <div class="pillars-band-inner">
+    <div class="pillar">
+      <div class="pillar-icon">&#127947;</div>
+      <div class="pillar-copy">
+        <h3>Fitness-Based Recovery</h3>
+        <p>Free group fitness classes open to anyone in recovery, building the physical and mental foundation for lasting sobriety.</p>
+      </div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">&#128218;</div>
+      <div class="pillar-copy">
+        <h3>Life Skills Development</h3>
+        <p>Practical one-on-one and group support for the real-world skills that make independence possible.</p>
+      </div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">&#128188;</div>
+      <div class="pillar-copy">
+        <h3>Job Training &amp; Placement</h3>
+        <p>Credential-based career pathways in peer support and fitness, plus placement partnerships with employers across the trades and beyond.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FITNESS-BASED RECOVERY -->
+<section class="services-section fitness-section" id="fitness">
+  <div class="services-section-inner">
+    <div class="section-tag">Pillar 1</div>
+    <h2>Fitness-Based<br>Recovery</h2>
+    <p class="section-intro">Our group fitness classes aren't just workouts &#8212; they're a structured environment where individuals in recovery practice the same disciplines that make long-term sobriety possible.</p>
+    <div class="fitness-layout">
+      <div class="fitness-card">
+        <div class="fitness-card-icon">&#129341;</div>
+        <h3>Recovery Skills Through Movement</h3>
+        <p>Every class is intentionally designed to develop the <strong>mental and behavioral skills</strong> recovery demands. When you show up at 5:30am, push through something hard, and finish alongside your community &#8212; you're practicing the same skills you'll need to stay sober.</p>
+        <div class="fitness-skills-list">
+          <span class="skill-chip">Resilience</span>
+          <span class="skill-chip">Emotional Regulation</span>
+          <span class="skill-chip">Consistency</span>
+          <span class="skill-chip">Accountability</span>
+          <span class="skill-chip">Community</span>
+          <span class="skill-chip">Discipline</span>
+        </div>
+      </div>
+      <div class="fitness-card">
+        <div class="fitness-card-icon">&#128101;</div>
+        <h3>Free &amp; Open to All</h3>
+        <p>Classes are <strong>completely free</strong> and open to anyone in the recovery community &#8212; whether you live in one of our houses, are referred by a partner organization, or simply walk through the door. <strong>No insurance. No fees. No barriers.</strong></p>
+        <p style="margin-top:16px;">We hold multiple sessions per week at mornings and afternoons, plus a Saturday Friends &amp; Family Day so that the people who love someone in recovery can join the movement too.</p>
+        <div style="margin-top:20px;">
+          <a href="schedule.html" class="btn-secondary" style="display:inline-block;">View Full Schedule &nbsp;&#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFE SKILLS -->
+<section class="services-section lifeskills-section" id="life-skills">
+  <div class="services-section-inner">
+    <div class="section-tag">Pillar 2</div>
+    <h2>Life Skills<br>Development</h2>
+    <p class="section-intro">Getting sober is only the beginning. Many people in recovery face practical barriers that make independence feel out of reach. We meet people where they are and help them build the everyday skills they need to move forward.</p>
+    <div class="lifeskills-grid">
+      <div class="ls-card">
+        <div class="ls-card-icon">&#128196;</div>
+        <h3>Resume Building</h3>
+        <p>We help participants craft resumes that honestly and confidently represent who they are today &#8212; including gaps, growth, and the real work recovery takes.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-card-icon">&#128663;</div>
+        <h3>Driver's License</h3>
+        <p>We walk alongside participants through the process of obtaining or reinstating a driver's license &#8212; a fundamental step toward employment and independence.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-card-icon">&#128140;</div>
+        <h3>Email &amp; Digital Basics</h3>
+        <p>Setting up a professional email, navigating job boards, and using basic technology &#8212; skills that open doors to employment, housing, and communication.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-card-icon">&#128179;</div>
+        <h3>Financial Foundations</h3>
+        <p>Opening a bank account, understanding pay stubs, and building basic budgeting habits to support a stable, sober life.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-card-icon">&#128203;</div>
+        <h3>Job Application Support</h3>
+        <p>From filling out applications to preparing for interviews, we provide hands-on support at every step of the job search process.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-card-icon">&#129309;</div>
+        <h3>Personal Navigation</h3>
+        <p>Whether it's legal paperwork, benefits enrollment, or figuring out next steps &#8212; we help participants navigate systems that can feel overwhelming alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOB TRAINING & PLACEMENT -->
+<section class="services-section jobs-section" id="job-training">
+  <div class="services-section-inner">
+    <div class="section-tag">Pillar 3</div>
+    <h2>Job Training<br>&amp; Placement</h2>
+    <p class="section-intro">One of our core QCO-qualifying services: we provide real career pathways &#8212; both through certifications our participants earn within our organization and through placement partnerships with employers in the trades and beyond.</p>
+    <div class="jobs-layout">
+
+      <div class="jobs-track">
+        <div class="jobs-track-label">Internal Pathways</div>
+        <h3>Careers Within<br>Our Organization</h3>
+        <p>For many participants, their first job in recovery is one they earn right here. We provide the training, mentorship, and hands-on experience to launch careers in <strong>peer support and group fitness</strong>.</p>
+        <div class="jobs-items">
+          <div class="jobs-item">
+            <div class="jobs-item-dot"></div>
+            <div class="jobs-item-copy">
+              <strong>Peer Support Specialist</strong>
+              <span>Participants who are living their recovery become credentialed peer support specialists &#8212; turning their lived experience into a career helping others navigate the same path.</span>
+            </div>
+          </div>
+          <div class="jobs-item">
+            <div class="jobs-item-dot"></div>
+            <div class="jobs-item-copy">
+              <strong>Group Fitness Trainer</strong>
+              <span>We train and certify participants as group fitness instructors, giving them the credentials and confidence to lead classes, build community, and earn a living doing what saved their own life.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="jobs-track">
+        <div class="jobs-track-label">External Placement</div>
+        <h3>Placement With<br>Partner Employers</h3>
+        <p>We maintain active relationships with employers across multiple industries who are willing to hire people in recovery. We work with each participant to find the right fit &#8212; and stay involved through the transition.</p>
+        <div class="jobs-items">
+          <div class="jobs-item">
+            <div class="jobs-item-dot"></div>
+            <div class="jobs-item-copy">
+              <strong>Trades &amp; Skilled Labor</strong>
+              <span>Construction, electrical, plumbing, HVAC, and other skilled trades &#8212; industries with strong demand and real opportunity for people ready to work hard.</span>
+            </div>
+          </div>
+          <div class="jobs-item">
+            <div class="jobs-item-dot"></div>
+            <div class="jobs-item-copy">
+              <strong>Healthcare &amp; Recovery Services</strong>
+              <span>Placement with partner treatment centers, behavioral health organizations, and community health providers.</span>
+            </div>
+          </div>
+          <div class="jobs-item">
+            <div class="jobs-item-dot"></div>
+            <div class="jobs-item-copy">
+              <strong>Other Partner Organizations</strong>
+              <span>We continuously expand our employer network to open doors in retail, hospitality, logistics, and more &#8212; wherever our participants want to go.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- QCO HIGHLIGHT -->
+<div class="qco-band" style="background: var(--iron);">
+  <div class="qco-band-inner">
+    <div class="qco-copy">
+      <div class="section-tag">Arizona QCO Tax Credit</div>
+      <h3>Your Donation Funds<br>These Pathways</h3>
+      <p>As a <strong>Qualifying Charitable Organization (QCO)</strong> recognized by the State of Arizona, donations to Barbell Saves Project qualify for a <strong>dollar-for-dollar state income tax credit</strong> &#8212; up to $470 for individuals and $938 for married couples filing jointly. Your contribution directly funds job training, life skills programming, peer support certifications, and fitness instruction &#8212; the services that create lasting change.</p>
+    </div>
+    <div class="qco-actions">
+      <a href="https://igfn.us/form/Rc6W1g" target="_blank" rel="noopener" class="btn-primary">Give via QCO Tax Credit</a>
+      <a href="get-involved.html#donate" class="btn-secondary">All Giving Options &nbsp;&#8594;</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="services-cta">
+  <div class="services-cta-inner">
+    <div class="section-tag" style="display:inline-block; margin-bottom:16px;">Ready to Take the Next Step?</div>
+    <h2>Recovery Starts<br>Here.</h2>
+    <p>Whether you're looking for a safe place to work out, need help building a resume, or are ready to turn your recovery into a career &#8212; we're here for all of it. Every service we provide is free to participants.</p>
+    <div class="cta-actions">
+      <a href="apply.html" class="btn-primary">Apply for a Bed</a>
+      <a href="schedule.html" class="btn-secondary">View Class Schedule &nbsp;&#8594;</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="images/image8.png" alt="The Barbell Saves Project">
+      <div class="footer-501c3">501(c)(3) Nonprofit Organization &middot; EIN: 84-3982601</div>
+      <p>Using the power of movement, peer support, and community to help people in recovery build lives worth staying sober for &#8212; at zero cost to participants.</p>
+      <div class="social-row">
+        <a href="#" class="social-icon">f</a>
+        <a href="#" class="social-icon">in</a>
+        <a href="https://www.instagram.com/thebarbellsaves" target="_blank" rel="noopener" class="social-icon">ig</a>
+        <a href="#" class="social-icon">tw</a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Programs</h5><ul><li><a href="schedule.html">Community Classes</a></li><li><a href="houses.html">Recovery Houses</a></li><li><a href="services.html">Services</a></li><li><a href="services.html#job-training">Job Training</a></li><li><a href="schedule.html">Class Schedule</a></li></ul></div>
+    <div class="footer-col"><h5>Get Involved</h5><ul><li><a href="get-involved.html#donate">Donate</a></li><li><a href="get-involved.html#sponsors">Become a Sponsor</a></li><li><a href="get-involved.html">Partner With Us</a></li><li><a href="shop.html">Shop Merch</a></li><li><a href="#">Volunteer</a></li><li><a href="#">Refer a Client</a></li></ul></div>
+    <div class="footer-col"><h5>Organization</h5><ul><li><a href="#">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="#">Contact</a></li><li><a href="#">Clinical Center (TBSOP)</a></li><li><a href="https://issuu.com/barbellsaves/docs/2025_impact_report_final" target="_blank" rel="noopener">2026 Impact Report</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>&#169; 2025 Barbell Saves Project &middot; All rights reserved &middot; <a href="#">Privacy Policy</a></p>
+    <p>Barbell Saves Project is a registered 501(c)(3) nonprofit. Donations are tax-deductible to the full extent of the law.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
