@@ -236,6 +236,10 @@
   .house-card-body { padding: 24px 22px; display: flex; flex-direction: column; flex: 1; }
   .house-badges { display: flex; gap: 6px; margin-bottom: 12px; }
   .house-badge { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); background: rgba(13,107,98,0.1); border: 1px solid rgba(13,107,98,0.3); border-radius: 3px; padding: 3px 8px; }
+  .house-badge-owned { color: #0d6b62; background: rgba(13,107,98,0.12); border-color: rgba(13,107,98,0.4); }
+  .house-badge-partner { color: #5a6a8a; background: rgba(90,106,138,0.1); border-color: rgba(90,106,138,0.3); }
+  .house-badge-soon { color: #999; background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.12); }
+  .house-card-coming-soon { opacity: 0.6; pointer-events: none; }
   .house-card h4 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.4rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--iron); margin-bottom: 10px; }
   .house-card p { font-size: 0.85rem; line-height: 1.7; color: #666; font-weight: 300; margin-bottom: 18px; flex: 1; }
   .house-actions { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
