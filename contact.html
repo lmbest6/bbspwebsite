@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Barbell Saves Project</title>
+<meta name="description" content="Get in touch with the Barbell Saves Project team in Phoenix, AZ. We're here to answer your questions.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: var(--off-white); }
+  .contact-page { padding: 120px 52px 80px; max-width: 800px; margin: 0 auto; }
+  .contact-header { margin-bottom: 48px; }
+  .contact-header .section-tag { margin-bottom: 12px; }
+  .contact-header h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 3rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--iron); line-height: 1; margin-bottom: 16px; }
+  .contact-header p { font-size: 1rem; color: #666; font-weight: 300; line-height: 1.75; max-width: 560px; }
+  .contact-info-row { display: flex; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
+  .contact-info-card { background: white; border: 1px solid rgba(0,0,0,0.08); border-top: 3px solid var(--teal); border-radius: 0 0 6px 6px; padding: 20px 24px; flex: 1; min-width: 200px; }
+  .contact-info-card .label { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+  .contact-info-card .value { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--iron); }
+  .contact-info-card a { color: var(--iron); text-decoration: none; }
+  .contact-info-card a:hover { color: var(--teal); }
+  .contact-form { background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; padding: 48px; }
+  .form-section-label { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+  .form-group.full { grid-column: 1 / -1; }
+  label { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--charcoal); }
+  label .req { color: var(--teal); margin-left: 3px; }
+  input, select, textarea { font-family: "Barlow", sans-serif; font-size: 0.95rem; color: var(--charcoal); background: var(--off-white); border: 1.5px solid rgba(0,0,0,0.12); border-radius: 4px; padding: 12px 14px; transition: border-color 0.2s, box-shadow 0.2s; outline: none; width: 100%; }
+  input:focus, select:focus, textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,107,98,0.1); }
+  select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  textarea { resize: vertical; min-height: 120px; }
+  .submit-btn { display: block; width: 100%; background: var(--teal); color: white; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.12em; text-transform: uppercase; border: none; padding: 18px; border-radius: 4px; cursor: pointer; transition: background 0.2s, transform 0.15s; margin-top: 8px; }
+  .submit-btn:hover { background: var(--teal-light); transform: translateY(-1px); }
+  .form-footer-note { margin-top: 16px; text-align: center; font-size: 0.8rem; color: #999; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .contact-page { padding: 100px 20px 60px; }
+    .contact-header h1 { font-size: 2.2rem; }
+    .contact-form { padding: 28px 20px; }
+    .form-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/image1.png" alt="The Barbell Saves Project">
+    <div class="nav-logo-text">Barbell Saves<span>Project</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#mission">Mission</a></li>
+    <li><a href="houses.html">Houses</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="partners.html">Partners</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="get-involved.html">Get Involved</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="get-involved.html#donate" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+<div class="contact-page">
+
+  <div class="contact-header">
+    <div class="section-tag">Get in Touch</div>
+    <h1>Contact Us</h1>
+    <p>Have a question, want to learn more, or just need to talk to someone? Fill out the form below and our team will get back to you within 1&ndash;2 business days.</p>
+  </div>
+
+  <div class="contact-info-row">
+    <div class="contact-info-card">
+      <div class="label">Phone / Text</div>
+      <div class="value"><a href="tel:6025368003">(602) 536-8003</a></div>
+    </div>
+    <div class="contact-info-card">
+      <div class="label">Email</div>
+      <div class="value"><a href="mailto:info@thebarbellsavesproject.org">info@thebarbellsavesproject.org</a></div>
+    </div>
+    <div class="contact-info-card">
+      <div class="label">Address</div>
+      <div class="value">2806 W Cactus Rd<br>Phoenix, AZ 85029</div>
+    </div>
+  </div>
+
+  <form class="contact-form" action="https://formspree.io/f/xpqoaqlv" method="POST">
+    <input type="hidden" name="_subject" value="Contact Form Submission — Barbell Saves Project">
+
+    <div class="form-section-label">Your Information</div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="first_name">First Name <span class="req">*</span></label>
+        <input type="text" id="first_name" name="first_name" required placeholder="First name">
+      </div>
+      <div class="form-group">
+        <label for="last_name">Last Name <span class="req">*</span></label>
+        <input type="text" id="last_name" name="last_name" required placeholder="Last name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(602) 555-0000">
+      </div>
+      <div class="form-group full">
+        <label for="reason">What can we help you with? <span class="req">*</span></label>
+        <select id="reason" name="reason" required>
+          <option value="" disabled selected>Select a topic</option>
+          <option value="General Question">General Question</option>
+          <option value="Recovery Housing">Recovery Housing</option>
+          <option value="Classes & Programming">Classes &amp; Programming</option>
+          <option value="Donation or Sponsorship">Donation or Sponsorship</option>
+          <option value="Partnership">Partnership</option>
+          <option value="Media or Press">Media or Press</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label for="message">Message <span class="req">*</span></label>
+        <textarea id="message" name="message" required placeholder="Tell us how we can help..."></textarea>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Send Message</button>
+    <p class="form-footer-note">For urgent needs, call or text us directly at <strong>(602) 536-8003</strong>.</p>
+
+  </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

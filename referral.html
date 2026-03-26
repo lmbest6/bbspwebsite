@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refer a Client — Barbell Saves Project</title>
+<meta name="description" content="Refer a client to the Barbell Saves Project for recovery housing or community programming in Phoenix, AZ.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: var(--off-white); }
+  .referral-page { padding: 120px 52px 80px; max-width: 800px; margin: 0 auto; }
+  .referral-header { margin-bottom: 48px; }
+  .referral-header .section-tag { margin-bottom: 12px; }
+  .referral-header h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 3rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--iron); line-height: 1; margin-bottom: 16px; }
+  .referral-header p { font-size: 1rem; color: #666; font-weight: 300; line-height: 1.75; max-width: 560px; }
+  .referral-note { background: rgba(13,107,98,0.08); border-left: 3px solid var(--teal); padding: 16px 20px; border-radius: 0 4px 4px 0; margin-bottom: 40px; font-size: 0.88rem; color: #555; line-height: 1.65; }
+  .referral-note strong { color: var(--teal-dark); }
+  .referral-form { background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; padding: 48px; }
+  .form-section-label { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+  .form-group.full { grid-column: 1 / -1; }
+  label { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--charcoal); }
+  label .req { color: var(--teal); margin-left: 3px; }
+  input, select, textarea { font-family: "Barlow", sans-serif; font-size: 0.95rem; color: var(--charcoal); background: var(--off-white); border: 1.5px solid rgba(0,0,0,0.12); border-radius: 4px; padding: 12px 14px; transition: border-color 0.2s, box-shadow 0.2s; outline: none; width: 100%; }
+  input:focus, select:focus, textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,107,98,0.1); }
+  select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  textarea { resize: vertical; min-height: 100px; }
+  .divider { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+  .submit-btn { display: block; width: 100%; background: var(--teal); color: white; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.12em; text-transform: uppercase; border: none; padding: 18px; border-radius: 4px; cursor: pointer; transition: background 0.2s, transform 0.15s; margin-top: 8px; }
+  .submit-btn:hover { background: var(--teal-light); transform: translateY(-1px); }
+  .form-footer-note { margin-top: 16px; text-align: center; font-size: 0.8rem; color: #999; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .referral-page { padding: 100px 20px 60px; }
+    .referral-header h1 { font-size: 2.2rem; }
+    .referral-form { padding: 28px 20px; }
+    .form-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/image1.png" alt="The Barbell Saves Project">
+    <div class="nav-logo-text">Barbell Saves<span>Project</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#mission">Mission</a></li>
+    <li><a href="houses.html">Houses</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="partners.html">Partners</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="get-involved.html">Get Involved</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="get-involved.html#donate" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+<div class="referral-page">
+
+  <div class="referral-header">
+    <div class="section-tag">Partner Resources</div>
+    <h1>Refer a Client</h1>
+    <p>Are you a clinician, case manager, treatment provider, or community partner? Use this form to refer someone for recovery housing or community programming. We'll follow up directly.</p>
+  </div>
+
+  <div class="referral-note">
+    <strong>What happens next:</strong> Our team will review your referral and reach out to you and/or the client within 1–2 business days. For urgent placements, please call us directly at <strong>(602) 536-8003</strong>.
+  </div>
+
+  <form class="referral-form" action="https://formspree.io/f/xpqoaqlv" method="POST">
+    <input type="hidden" name="_subject" value="Client Referral — Barbell Saves Project">
+
+    <div class="form-section-label">Referring Party</div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="ref_name">Your Name <span class="req">*</span></label>
+        <input type="text" id="ref_name" name="ref_name" required placeholder="Full name">
+      </div>
+      <div class="form-group">
+        <label for="ref_org">Organization / Agency</label>
+        <input type="text" id="ref_org" name="ref_org" placeholder="Where do you work?">
+      </div>
+      <div class="form-group">
+        <label for="ref_email">Your Email <span class="req">*</span></label>
+        <input type="email" id="ref_email" name="ref_email" required placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label for="ref_phone">Your Phone <span class="req">*</span></label>
+        <input type="tel" id="ref_phone" name="ref_phone" required placeholder="(602) 555-0000">
+      </div>
+    </div>
+
+    <hr class="divider">
+    <div class="form-section-label">Client Information</div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="client_name">Client Name <span class="req">*</span></label>
+        <input type="text" id="client_name" name="client_name" required placeholder="Full name">
+      </div>
+      <div class="form-group">
+        <label for="client_phone">Client Phone</label>
+        <input type="tel" id="client_phone" name="client_phone" placeholder="(602) 555-0000">
+      </div>
+      <div class="form-group full">
+        <label for="referral_type">Referral Type <span class="req">*</span></label>
+        <select id="referral_type" name="referral_type" required>
+          <option value="" disabled selected>What are you referring them for?</option>
+          <option value="Recovery Housing (Bed Application)">Recovery Housing (Bed Application)</option>
+          <option value="Community Classes / Programming">Community Classes / Programming</option>
+          <option value="Both Housing and Programming">Both Housing and Programming</option>
+          <option value="General Inquiry / Not Sure">General Inquiry / Not Sure</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label for="client_situation">Client Situation <span class="req">*</span></label>
+        <textarea id="client_situation" name="client_situation" required placeholder="Brief summary: current situation, days sober, insurance, urgency, any relevant clinical context..."></textarea>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Referral</button>
+    <p class="form-footer-note">For urgent placements, call or text directly at <strong>(602) 536-8003</strong> or email <strong>info@thebarbellsavesproject.org</strong>.</p>
+
+  </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
