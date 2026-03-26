@@ -449,9 +449,21 @@
   .impact-callout-eyebrow { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal-bright); margin-bottom: 4px; }
   .impact-callout-text p { color: rgba(255,255,255,0.75); font-size: 0.97rem; font-weight: 300; }
 
+  /* HAMBURGER */
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
   @media (max-width: 960px) {
     nav { padding: 0 24px; }
-    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; background: rgba(14,14,14,0.99); padding: 24px 28px 32px; gap: 4px; border-bottom: 1px solid rgba(13,107,98,0.3); }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a { font-size: 1.1rem; padding: 12px 0; display: block; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-donate { display: inline-block; margin-top: 8px; text-align: center; width: 100%; padding: 14px !important; }
     .section { padding: 72px 24px; }
     .hero-body { padding: 110px 24px 48px; }
     .hero-logo { width: 80px; height: 80px; }

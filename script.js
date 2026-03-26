@@ -1,4 +1,19 @@
 
+  const hamburger = document.getElementById("nav-hamburger");
+  const navLinks = document.getElementById("nav-links");
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("open");
+      navLinks.classList.toggle("open");
+    });
+    navLinks.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        hamburger.classList.remove("open");
+        navLinks.classList.remove("open");
+      });
+    });
+  }
+
   function selectAmt(el) { document.querySelectorAll(".amt-btn").forEach(b => b.classList.remove("selected")); el.classList.add("selected"); }
   function setFreq(el) { document.querySelectorAll(".freq-btn").forEach(b => b.classList.remove("active")); el.classList.add("active"); }
   window.addEventListener("scroll", () => { document.getElementById("main-nav").style.background = window.scrollY > 60 ? "rgba(14,14,14,0.98)" : "rgba(16,16,16,0.96)"; });
