@@ -397,6 +397,7 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
+    .media-grid { grid-template-columns: 1fr !important; }
     .event-hero-body { padding: 120px 24px 60px; }
     .event-title { font-size: clamp(3.5rem, 14vw, 6rem); }
     .event-details-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -542,6 +543,29 @@
         <h3>Change Lives</h3>
         <p>Every dollar raised keeps Barbell Saves programming free for people in recovery who need it most.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA: PHOTO + VIDEO -->
+<section style="background:var(--iron);padding:100px 52px;">
+  <div style="max-width:1240px;margin:0 auto;">
+    <div class="section-tag" style="color:var(--teal-bright);margin-bottom:16px;">From Last Year</div>
+    <h2 class="section-title light" style="margin-bottom:56px;">See It <em style="color:var(--teal-bright);font-style:normal;">In Action</em></h2>
+    <div class="media-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;">
+
+      <!-- Photo -->
+      <div style="overflow:hidden;border-radius:3px;position:relative;">
+        <img src="images/row-for-recovery-1.jpg" alt="Row for Recovery event at Jump Ship Phoenix" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:3px;">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(0deg,rgba(0,0,0,0.7),transparent);font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);">Row for Recovery 2024 &nbsp;&middot;&nbsp; Jump Ship Phoenix</div>
+      </div>
+
+      <!-- Instagram Reel -->
+      <div style="display:flex;flex-direction:column;align-items:center;">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DLi37Uzylzv/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;width:100%;max-width:100%;padding:0;"></blockquote>
+        <script async src="//www.instagram.com/embed.js"></script>
+      </div>
+
     </div>
   </div>
 </section>
