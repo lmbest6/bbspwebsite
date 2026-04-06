@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Row for Recovery — June 27th | Barbell Saves Project</title>
+<meta name="description" content="Join us June 27th at 8 AM for Row for Recovery — teams of 6 row 26.2 miles together at Jump Ship Phoenix. Register at row4bbs.givesmart.com.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ── EVENT HERO ── */
+  .event-hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  .event-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("images/row-for-recovery-1.jpg");
+    background-size: cover;
+    background-position: center 35%;
+    filter: brightness(0.38) saturate(0.8);
+  }
+  .event-hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(13,107,98,0.25) 0%, transparent 60%),
+      linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.0) 30%, rgba(0,0,0,0.75) 80%, rgba(0,0,0,0.9) 100%);
+  }
+  .event-hero-lines {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px);
+    background-size: 100% 80px;
+    pointer-events: none;
+  }
+  .event-hero-body {
+    position: relative;
+    z-index: 2;
+    padding: 160px 52px 80px;
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .event-presented {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+  }
+  .event-presented span { color: var(--teal-bright); }
+  .event-presented-rule { width: 32px; height: 1px; background: var(--teal-bright); opacity: 0.6; }
+  .event-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-size: clamp(4.5rem, 11vw, 10rem);
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 36px;
+  }
+  .event-title em {
+    display: block;
+    color: var(--teal-bright);
+    font-style: normal;
+  }
+  .event-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 44px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    max-width: 680px;
+  }
+  .event-meta-item {
+    flex: 1;
+    min-width: 140px;
+    padding: 20px 28px;
+    background: rgba(0,0,0,0.5);
+    border-right: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+  }
+  .event-meta-item:last-child { border-right: none; }
+  .event-meta-label {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--teal-bright);
+    margin-bottom: 4px;
+  }
+  .event-meta-val {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: white;
+  }
+  .event-hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* ── TAGLINE BAND ── */
+  .tagline-band {
+    background: var(--teal);
+    padding: 22px 52px;
+    text-align: center;
+  }
+  .tagline-band p {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: white;
+  }
+  .tagline-band p span { color: rgba(255,255,255,0.55); }
+
+  /* ── EVENT DETAILS ── */
+  .event-details {
+    background: var(--off-white);
+    padding: 100px 52px;
+  }
+  .event-details-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .event-detail-body p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #5a5a5a;
+    margin-bottom: 22px;
+    font-weight: 300;
+  }
+  .event-detail-body p strong { color: var(--charcoal); font-weight: 600; }
+
+  /* format card */
+  .format-card {
+    background: var(--iron);
+    border-top: 3px solid var(--teal-bright);
+    padding: 40px 36px;
+  }
+  .format-card-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: white;
+    margin-bottom: 28px;
+  }
+  .format-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .format-stat:last-child { border-bottom: none; }
+  .format-stat-label {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.45);
+    font-weight: 300;
+  }
+  .format-stat-val {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--teal-bright);
+    text-align: right;
+  }
+  .format-cta {
+    margin-top: 32px;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .how-it-works {
+    background: var(--iron);
+    padding: 100px 52px;
+    position: relative;
+    overflow: hidden;
+  }
+  .how-it-works::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 70% at 90% 30%, rgba(13,107,98,0.14) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 50% at 10% 80%, rgba(13,107,98,0.07) 0%, transparent 55%);
+  }
+  .how-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .how-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    margin-top: 56px;
+  }
+  .how-step {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 44px 36px;
+    position: relative;
+  }
+  .how-step-num {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+  }
+  .how-step-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(13,107,98,0.15);
+    border: 1px solid rgba(13,107,98,0.3);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  .how-step h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: white;
+    margin-bottom: 12px;
+  }
+  .how-step p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.45);
+    font-weight: 300;
+  }
+
+  /* ── PARTNERS ── */
+  .event-partners {
+    background: var(--warm-white);
+    padding: 80px 52px;
+    text-align: center;
+  }
+  .event-partners-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .event-partners-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    flex-wrap: wrap;
+    margin-top: 48px;
+  }
+  .event-partner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .event-partner-item img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(0.2);
+  }
+  .event-partner-name {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #888;
+  }
+  .event-partner-divider {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: rgba(0,0,0,0.1);
+    align-self: center;
+  }
+
+  /* ── REGISTER CTA ── */
+  .event-register {
+    background: var(--iron);
+    padding: 100px 52px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .event-register::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("images/row-for-recovery-1.jpg");
+    background-size: cover;
+    background-position: center 50%;
+    filter: brightness(0.12) saturate(0.6);
+    z-index: 0;
+  }
+  .event-register::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(13,107,98,0.22) 0%, transparent 65%);
+    z-index: 1;
+  }
+  .event-register-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .event-register-inner .section-tag {
+    justify-content: center;
+    color: var(--teal-bright);
+  }
+  .event-register h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    text-transform: uppercase;
+    line-height: 0.9;
+    color: white;
+    margin: 20px 0 28px;
+  }
+  .event-register h2 em {
+    color: var(--teal-bright);
+    font-style: normal;
+    display: block;
+  }
+  .event-register p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+    margin-bottom: 44px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .event-register-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-event {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--teal);
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 20px 48px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 32px rgba(13,107,98,0.45);
+  }
+  .btn-event:hover { background: var(--teal-light); transform: translateY(-2px); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .event-hero-body { padding: 120px 24px 60px; }
+    .event-title { font-size: clamp(3.5rem, 14vw, 6rem); }
+    .event-details-inner { grid-template-columns: 1fr; gap: 48px; }
+    .how-steps { grid-template-columns: 1fr; }
+    .event-details { padding: 72px 24px; }
+    .how-it-works { padding: 72px 24px; }
+    .event-register { padding: 72px 24px; }
+    .tagline-band { padding: 18px 24px; }
+    .tagline-band p { font-size: 1rem; letter-spacing: 0.12em; }
+    .event-partners { padding: 60px 24px; }
+    .event-partners-logos { gap: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/image1.png" alt="The Barbell Saves Project">
+    <div class="nav-logo-text">Barbell Saves<span>Project</span></div>
+  </a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button><ul class="nav-links" id="nav-links">
+    <li><a href="index.html#mission">Mission</a></li>
+    <li><a href="houses.html">Houses</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="partners.html">Partners</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="get-involved.html">Get Involved</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="row-for-recovery.html" class="nav-donate" style="background:var(--teal-bright)!important">&#127939; Row for Recovery</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="event-hero">
+  <div class="event-hero-bg"></div>
+  <div class="event-hero-lines"></div>
+  <div class="event-hero-body">
+    <div class="event-presented">
+      <div class="event-presented-rule"></div>
+      <span>The Barbell Saves Project</span>
+      &nbsp;&middot;&nbsp;
+      <span>Jump Ship Phoenix</span>
+      <div class="event-presented-rule"></div>
+    </div>
+    <h1 class="event-title">
+      Row For<em>Recovery</em>
+    </h1>
+    <div class="event-meta-row">
+      <div class="event-meta-item">
+        <div class="event-meta-label">Date</div>
+        <div class="event-meta-val">June 27th</div>
+      </div>
+      <div class="event-meta-item">
+        <div class="event-meta-label">Time</div>
+        <div class="event-meta-val">8 AM</div>
+      </div>
+      <div class="event-meta-item">
+        <div class="event-meta-label">Format</div>
+        <div class="event-meta-val">Teams of 6</div>
+      </div>
+      <div class="event-meta-item">
+        <div class="event-meta-label">Distance</div>
+        <div class="event-meta-val">26.2 Miles</div>
+      </div>
+    </div>
+    <div class="event-hero-btns">
+      <a href="https://row4bbs.givesmart.com" target="_blank" rel="noopener" class="btn-primary">&#127939; Register Your Team</a>
+      <a href="#details" class="btn-secondary">Learn More &darr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- TAGLINE -->
+<div class="tagline-band">
+  <p>Push Together. <span>&nbsp;·&nbsp;</span> Row Stronger. <span>&nbsp;·&nbsp;</span> Recover Together.</p>
+</div>
+
+<!-- EVENT DETAILS -->
+<section class="event-details" id="details">
+  <div class="event-details-inner">
+    <div>
+      <div class="section-tag">About the Event</div>
+      <h2 class="section-title" style="color:var(--iron)">What Is<br>Row for<br>Recovery?</h2>
+      <div class="event-detail-body">
+        <p>Row for Recovery is a community fundraiser where <strong>teams of 6 take turns on rowing machines</strong> to collectively row a full marathon — 26.2 miles — together.</p>
+        <p>Every stroke raises money to keep Barbell Saves Project programs <strong>free for people in recovery</strong>. No experience needed. All fitness levels welcome.</p>
+        <p>Held at <strong>Jump Ship Phoenix</strong>, one of the valley's premier functional fitness facilities — the energy in the room is something you have to feel to believe.</p>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="format-card-title">Event Format</div>
+      <div class="format-stat">
+        <div class="format-stat-label">Date &amp; Time</div>
+        <div class="format-stat-val">June 27th · 8 AM</div>
+      </div>
+      <div class="format-stat">
+        <div class="format-stat-label">Team Size</div>
+        <div class="format-stat-val">6 Athletes</div>
+      </div>
+      <div class="format-stat">
+        <div class="format-stat-label">Total Distance</div>
+        <div class="format-stat-val">26.2 Miles</div>
+      </div>
+      <div class="format-stat">
+        <div class="format-stat-label">Venue</div>
+        <div class="format-stat-val">Jump Ship Phoenix</div>
+      </div>
+      <div class="format-stat">
+        <div class="format-stat-label">Cause</div>
+        <div class="format-stat-val">Recovery Programs</div>
+      </div>
+      <div class="format-cta">
+        <a href="https://row4bbs.givesmart.com" target="_blank" rel="noopener" class="btn-primary" style="width:100%;justify-content:center">Register at row4bbs.givesmart.com &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="how-inner">
+    <div class="section-tag" style="color:var(--teal-bright)">How It Works</div>
+    <h2 class="section-title light">Simple.<br><em style="color:var(--teal-bright);font-style:normal">Powerful.</em></h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-step-icon">&#128101;</div>
+        <h3>Build Your Team</h3>
+        <p>Round up 6 people — friends, coworkers, gym crew, or family. Register together at row4bbs.givesmart.com.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-step-icon">&#127939;</div>
+        <h3>Row Your Meters</h3>
+        <p>Show up June 27th at 8 AM. Your team takes turns on the erg, collectively covering a full marathon — 26.2 miles.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-step-icon">&#10084;&#65039;</div>
+        <h3>Change Lives</h3>
+        <p>Every dollar raised keeps Barbell Saves programming free for people in recovery who need it most.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESENTED BY -->
+<section class="event-partners">
+  <div class="event-partners-inner">
+    <div class="section-tag" style="justify-content:center">Presented By</div>
+    <h2 class="section-title" style="color:var(--iron)">Two Communities.<br>One Mission.</h2>
+    <div class="event-partners-logos">
+      <div class="event-partner-item">
+        <img src="images/image1.png" alt="The Barbell Saves Project">
+        <div class="event-partner-name">The Barbell Saves Project</div>
+      </div>
+      <div class="event-partner-divider">&times;</div>
+      <div class="event-partner-item">
+        <div style="height:80px;display:flex;align-items:center;justify-content:center;padding:0 16px;background:var(--iron);border-radius:4px">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;text-transform:uppercase;letter-spacing:0.06em;color:white">Jump Ship Phoenix</span>
+        </div>
+        <div class="event-partner-name">Jump Ship Phoenix</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER CTA -->
+<section class="event-register">
+  <div class="event-register-inner">
+    <div class="section-tag">Registration is Open</div>
+    <h2>Register<em>Your Team</em></h2>
+    <p>Spots are limited. Grab your team of 6, sign up, and come row a marathon for recovery on June 27th.</p>
+    <div class="event-register-btns">
+      <a href="https://row4bbs.givesmart.com" target="_blank" rel="noopener" class="btn-event">&#127939; Get Your Tickets</a>
+      <a href="get-involved.html" class="btn-secondary">Other Ways to Give</a>
+    </div>
+    <p style="margin-top:28px;font-size:0.82rem;color:rgba(255,255,255,0.3)">
+      Questions? Email <a href="mailto:info@thebarbellsavesproject.org" style="color:var(--teal-bright);text-decoration:none">info@thebarbellsavesproject.org</a>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="images/image8.png" alt="The Barbell Saves Project">
+      <div class="footer-501c3">501(c)(3) Nonprofit Organization &middot; EIN: 84-3982601</div>
+      <p>Using the power of movement, peer support, and community to help people in recovery build lives worth staying sober for. Community classes are always free and open to all.</p>
+      <div class="social-row">
+        <a href="https://www.instagram.com/thebarbellsaves" target="_blank" rel="noopener" class="social-icon">ig</a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Programs</h5><ul><li><a href="schedule.html">Community Classes</a></li><li><a href="houses.html">Recovery Houses</a></li><li><a href="services.html">Peer Support</a></li><li><a href="schedule.html">Class Schedule</a></li></ul></div>
+    <div class="footer-col"><h5>Get Involved</h5><ul><li><a href="get-involved.html#donate">Donate</a></li><li><a href="get-involved.html#sponsors">Become a Sponsor</a></li><li><a href="row-for-recovery.html">Row for Recovery</a></li><li><a href="shop.html">Shop Merch</a></li></ul></div>
+    <div class="footer-col"><h5>Organization</h5><ul><li><a href="team.html">Our Team</a></li><li><a href="contact.html">Contact</a></li><li><a href="partners.html">Partners</a></li><li><a href="https://issuu.com/barbellsaves/docs/2025_impact_report_final" target="_blank" rel="noopener">2026 Impact Report</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>&#169; 2025 Barbell Saves Project &middot; All rights reserved</p>
+    <p>Barbell Saves Project is a registered 501(c)(3) nonprofit. Donations are tax-deductible to the full extent of the law.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
